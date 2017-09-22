@@ -1,0 +1,18 @@
+{
+  "name": "AntaresArmy",
+  "description": "C#/Windows CLI to parse Warlord PDFs to XML and a simple web app to read them",
+  "author": "Craig Fleming <craig.fleming.42@gmail.com>",
+  "scripts": {
+    "test": "grunt test",
+    "deploy": "grunt deploy"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-ftp-deploy": "^0.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rythos42/AntaresArmy.git"
+  }
+}
