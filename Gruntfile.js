@@ -48,7 +48,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-ftp-deploy');
 
-    //grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('test', []);
     grunt.registerTask('default', ['test']);
     grunt.registerTask('deploy', ['create-ftp-file', 'ftp-deploy']);
     
