@@ -1,0 +1,71 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" integrity="sha256-owX7sroiO/O1a7h3a4X29A1g3QgqdNvijRQ7V5TH45M=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+    <script src="js/ArmyListMapper.js"></script>
+    <script src="js/ApplicationViewModel.js"></script>
+    <script src="js/ModelViewModel.js"></script>
+    <script src="js/OptionViewModel.js"></script>
+    <script src="js/Model.js"></script>
+    <script src="js/Option.js"></script>
+    
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/icomoon.css" rel="stylesheet" />
+    <link href="css/icon-fonts.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <script>
+        $(document).ready(function() {
+            var mapper = new ArmyListMapper();
+            mapper.load(function(xml) {
+                ko.applyBindings(new ApplicationViewModel(xml));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+            <select data-bind="options: models, optionsCaption: 'Add model...', value: currentModel, optionsText: 'name'"></select>
+    
+            <table id="Models">
+                <thead>
+                    <tr>
+                        <th class="name">Name</th>
+                        <th>Points</th>
+                        <th class="options">Options</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: addedModels">
+                    <tr>
+                        <td class="name" data-bind="text: name" />
+                        <td data-bind="text: points" />
+                        <td class="options">
+                            <select data-bind="options: options, optionsCaption: 'Add option...', value: currentOption, optionsText: 'name'"></select>
+                            <table id="Options" data-bind="visible: hasOptions">
+                                <tbody data-bind="foreach: addedOptions">
+                                    <tr>
+                                        <td data-bind="text: name" />
+                                        <td data-bind="text: points" />
+                                        <td><a href="#" class="link-icon" data-bind="click: $parent.deleteOption"><span class="icon-bin"></span></a></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td><a href="#" class="link-icon" data-bind="click: $parent.deleteModel"><span class="icon-bin"></span></a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total:</td>
+                        <td data-bind="text: totalPoints">
+                        <td />
+                    </tr>
+                </tfoot>
+            </table>
+    </div>
+</body>
+</html>

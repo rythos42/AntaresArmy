@@ -1,0 +1,38 @@
+#Models .name {
+    width: 300px
+}
+
+#Models .options {
+    width: 200px
+}
+
+#Models {
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+
+#Models > tbody > tr {
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0, .5); 
+    
+}
+
+#Models td {
+    padding: 0.2em;
+    
+}
+
+.options select {
+    width: 100%;
+}
+
+.options table {
+    border-collapse: separate;
+}
+
+.options table td {
+    padding: 0.2em;
+}
+
+.link-icon {
+    text-decoration: none !important;
+}
