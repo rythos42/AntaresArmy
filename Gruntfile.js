@@ -39,6 +39,7 @@ module.exports = function (grunt) {
                 'db',
                 'img/*.pdn',
                 'composer.json',
+                'node_modules',
                 'vendor',
                 ]
             }
