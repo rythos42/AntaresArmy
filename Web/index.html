@@ -1,7 +1,12 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" integrity="sha256-owX7sroiO/O1a7h3a4X29A1g3QgqdNvijRQ7V5TH45M=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     
     <script src="js/ArmyListMapper.js"></script>
@@ -18,54 +23,84 @@
     
     <script>
         $(document).ready(function() {
-            var mapper = new ArmyListMapper();
-            mapper.load(function(xml) {
-                ko.applyBindings(new ApplicationViewModel(xml));
-            });
+            ko.applyBindings(new ApplicationViewModel());
         });
     </script>
+    
+    <title>Antares Army</title>
 </head>
 <body>
-    <div class="container">
-        
-            <select data-bind="options: models, optionsCaption: 'Add model...', value: currentModel, optionsText: 'name'"></select>
+    <div class="container" data-bind="visible: loaded" style="display: none;">
+        <div class="header row">
+            <div class="col-6">
+                <h2>Antares</h2>
+            </div>
+            <div class="actions col-6">
+                <select data-bind="options: availableFactions, value: selectedFaction"></select>
+                <a href="#" class="link-icon" data-toggle="modal" data-target="#HelpModal"><span class="icon-question"></span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3 data-bind="text: selectedFaction"></h3>
+                <select data-bind="options: models, optionsCaption: 'Add model...', value: selectedModel, optionsText: 'name'"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table id="Models">
+                    <thead>
+                        <tr>
+                            <th class="name">Name</th>
+                            <th>Points</th>
+                            <th class="options">Options</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: addedModels">
+                        <tr>
+                            <td class="name" data-bind="text: name" />
+                            <td data-bind="text: points" />
+                            <td class="options">
+                                <select data-bind="options: options, optionsCaption: 'Add option...', value: currentOption, optionsText: 'name'"></select>
+                                <table id="Options" data-bind="visible: hasOptions">
+                                    <tbody data-bind="foreach: addedOptions">
+                                        <tr>
+                                            <td data-bind="text: name" />
+                                            <td data-bind="text: points" />
+                                            <td><a href="#" class="link-icon" data-bind="click: $parent.deleteOption"><span class="icon-bin"></span></a></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td><a href="#" class="link-icon" data-bind="click: $parent.deleteModel"><span class="icon-bin"></span></a></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total:</td>
+                            <td data-bind="text: totalPoints">
+                            <td />
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
     
-            <table id="Models">
-                <thead>
-                    <tr>
-                        <th class="name">Name</th>
-                        <th>Points</th>
-                        <th class="options">Options</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody data-bind="foreach: addedModels">
-                    <tr>
-                        <td class="name" data-bind="text: name" />
-                        <td data-bind="text: points" />
-                        <td class="options">
-                            <select data-bind="options: options, optionsCaption: 'Add option...', value: currentOption, optionsText: 'name'"></select>
-                            <table id="Options" data-bind="visible: hasOptions">
-                                <tbody data-bind="foreach: addedOptions">
-                                    <tr>
-                                        <td data-bind="text: name" />
-                                        <td data-bind="text: points" />
-                                        <td><a href="#" class="link-icon" data-bind="click: $parent.deleteOption"><span class="icon-bin"></span></a></a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td><a href="#" class="link-icon" data-bind="click: $parent.deleteModel"><span class="icon-bin"></span></a></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Total:</td>
-                        <td data-bind="text: totalPoints">
-                        <td />
-                    </tr>
-                </tfoot>
-            </table>
+    <div class="modal fade" id="HelpModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p><strong>Designed and developed by Craig Fleming</strong></p>
+                    <p><a href="mailto:rythos42@gmail.com">rythos42 at gmail dot com</a></p>
+                    <p>This apps goal is to allow quick tinkering of army lists, using data that has been automatically pulled from the <a href="https://store.warlordgames.com/collections/rules-books/digital+beyond-the-gates-of-antares">Warlord Games free army list PDFs</a>. No other purpose is intended. This is <strong>not</strong> an officially supported <a href="https://store.warlordgames.com/">Warlord Games</a> app, no permission has been asked for or given.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

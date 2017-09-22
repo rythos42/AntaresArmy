@@ -13,7 +13,7 @@ namespace ParseAntaresPdf
 
         public bool HasArg(string key)
         {
-            return args.Any(arg => key.IndexOf(arg) != -1);
+            return args.Any(arg => arg.IndexOf(key) != -1);
         }
 
         public string GetKeyValue(string key)

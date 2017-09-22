@@ -13,7 +13,6 @@
 
 #Models > tbody > tr {
     box-shadow: 3px 3px 3px 3px rgba(0,0,0, .5); 
-    
 }
 
 #Models td {
@@ -39,4 +38,12 @@ td.options {
 
 .link-icon {
     text-decoration: none !important;
+}
+
+.header .actions {
+    text-align: right;
+}
+
+.container {
+    margin-top: 1em;
 }

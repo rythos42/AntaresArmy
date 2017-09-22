@@ -50,7 +50,11 @@
   <ItemGroup>
     <Compile Include="CommandLineArguments.cs" />
     <Compile Include="CompareIgnoreSpaces.cs" />
+    <Compile Include="Text\IgnoreLines.cs" />
+    <Compile Include="Text\Models.cs" />
     <Compile Include="Option.cs" />
+    <Compile Include="Text\Options.cs" />
+    <Compile Include="Text\Sections.cs" />
     <Compile Include="TopToBottomTextExtractionStrategy.cs" />
     <Compile Include="LineTypes.cs" />
     <Compile Include="Program.cs" />

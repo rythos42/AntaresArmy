@@ -1,43 +1,6 @@
-.icon-pencil:before {
-  content: "\e905";
-}
-.icon-upload:before {
-  content: "\e961";
-}
-.icon-user:before {
-  content: "\e971";
-}
-.icon-user-tie:before {
-  content: "\e976";
-}
-.icon-cog:before {
-  content: "\e994";
-}
 .icon-bin:before {
   content: "\e9ac";
 }
-.icon-flag:before {
-  content: "\e9cc";
+.icon-question:before {
+  content: "\ea09";
 }
-.icon-star-full:before {
-  content: "\e9d9";
-}
-.icon-plus:before {
-  content: "\ea0a";
-}
-.icon-minus:before {
-  content: "\ea0b";
-}
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-checkmark:before {
-  content: "\ea10";
-}
-.icon-exit:before {
-  content: "\ea14";
-}
-.icon-arrow-left2:before {
-  content: "\ea40";
-}
-

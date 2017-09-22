@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
+using ParseAntaresPdf.Text;
 
 namespace ParseAntaresPdf
 {
-    class Program
+    public static class Program
     {
         private static bool debugWholeOutput;
         private static bool debugWholeOptionsOutput;
@@ -20,7 +20,10 @@ namespace ParseAntaresPdf
         private static bool inOptions;
         private static LineType nextLine;
         private static StringBuilder currentOptions = new StringBuilder();
-        
+
+        private const string AmmoTypes = "Scrambler, Arc, Blur, Scoot, Net and Grip";
+
+
         private static void Main(string[] args)
         {
             var commandLineArgs = new CommandLineArguments(args);
@@ -84,92 +87,7 @@ namespace ParseAntaresPdf
             }
             return output.ToString();
         }
-
-        private static string[] Sections = { "TACTICAL" , "STRATEGIC", "SUPPORT","AUXILIARY"  };
-        private static string[] IgnoreLines =
-        {
-            "Concord Army List",
-            "•     ",
-            "*Note this is a discounted value because it’s an either/or unit choice for ",
-            "Exchange any or all twin Plasma Carbines for  ",
-            "Plasma Lance @Free a weapon that already carries a ‘premium weapon’ points adjustment"
-        };
-
-        private static string[] Models =
-        {
-            "C3 STRIKE COMMAND SQUAD",
-            "NUHU MANDARIN",
-            "C3 DROP COMMAND SQUAD",
-            "CONCORD DRONE COMMANDER",
-            "NANO-PROBE NET",
-            "C3 STRIKE SQUAD",
-            "C3 DROP SQUAD",
-            "C3 INTERCEPTOR COMMAND SQUAD",
-            "C3 INTERCEPTOR SQUAD",
-            "C3 STRIKE SUPPORT TEAM",
-            "CONCORD C3D1 LIGHT SUPPORT DRONE",
-            "CONCORD T7 TRANSPORTER DRONE",
-            "CONCORD C3D2 MEDIUM SUPPORT DRONE",
-            "C3 STRIKE HEAVY SUPPORT TEAM",
-            "CONCORD C3M4 COMBAT DRONE",
-            "CONCORD C3M407 (CS) CLOSE SUPPORT DRONE",
-            "CONCORD C3M25 HEAVY COMBAT DRONE",
-            "CONCORD C3M50 HEAVY SUPPORT DRONE",
-            "TARGETER PROBE SHARD",
-            "MEDI-PROBE SHARD",
-            "SCOUT PROBE SHARD",
-            "CONCORD ISO-DRONE",
-            "CONCORD C3D1/GP GENERAL PURPOSE DRONE"
-        };
-
-        // Careful if you re-order these or add new ones.
-        // The algorithm runs top to bottom, so if a line matches an earlier option "Trooper" when it should match a later one, it will output wrong.
-        // Generally: More general items must be later in the list than more specific items
-        private static Option[] Options =
-        {
-            new Option { Name = "Add up to 3 Drop Troopers with Plasma Carbine and X-Sling Exchange 1 Drop Trooper’s Plasma Carbine and X-Sling for a  to unit" },
-            new Option {Name = "increasing  capability", Replacement = "Enhanced Machine Intelligence"}, // the parsing is weird here - the lines don't match up
-            new Option {Name = "kinetic armour", Replacement = "Kinetic Armour"},
-            new Option {Name = "Spotter Drone"},
-            new Option {Name = "Leader 3"},
-            new Option {Name = "Medi-Drone"},
-            new Option {Name = "Medi-Probes"},
-            new Option {Name = "Plasma Grenade"},
-            new Option {Name = "Synchoniser Drone"},
-            new Option {Name = "Synchroniser Drone"},
-            new Option {Name = "SlingNet Ammo"},
-            new Option {Name = "Shield Drone"},
-            new Option {Name = "Gun Drones with Plasma Carbines"},
-            new Option {Name = "Weapon Drone"},
-            new Option {Name = "Batter Drone"},
-            new Option {Name = "Scrambler, Arc, Blur, Scoot, Net and Grip"},
-            new Option {Name = "Scrambler, Arc, Blur, Scoot, Net or Grip"},
-            new Option {Name = "X-launcher"},
-            new Option {Name = "X-Howitzer"},
-            new Option {Name = "Mag Mortar"},
-            new Option {Name = "Nano-probe Net"},
-            new Option {Name = "Self-Repair"},
-            new Option {Name = "Self Repair"},
-            new Option {Name = "Nano-probes"},
-            new Option {Name = "Leader 2"},
-            new Option {Name = "Compactor Drone with compacted Plasma Cannon"},
-            new Option {Name = "Fractal Cannon"},
-            new Option {Name = "Compression Cannon"},
-            new Option {Name = "Plasma Cannon"},
-            new Option {Name = "Plasma Bombard"},
-            new Option {Name = "Sensor Module"},
-            new Option {Name = "Subverter Matrix"},
-            new Option {Name = "Scout Probes"},
-            new Option {Name = "Targeter Probe"},
-            new Option {Name = "Plasma Light Support"},
-            new Option {Name = "Compactor Drone"},
-            new Option {Name = "Leader"},
-            new Option {Name = "Plasma Lance"},
-            new Option {Name = "Trooper"}
-        };
-
-        private const string ammoTypes = "Scrambler, Arc, Blur, Scoot, Net and Grip";
-
+        
         private static string WriteAmmoTypes(StreamWriter outFile, string points, string ammoTypeLine, string pointsLine) 
         {
             // This gets a little weird
@@ -211,7 +129,7 @@ namespace ParseAntaresPdf
                 outFile.WriteLine("\t\t\t\t<option>");
 
                 // Have to handle ammo types specially
-                if (name.IndexOf(ammoTypes) != -1)
+                if (name.IndexOf(AmmoTypes) != -1)
                     points = WriteAmmoTypes(outFile, points, options[i], options[i + 1]);
                 else
                     WriteOptionName(outFile, name);
@@ -227,7 +145,7 @@ namespace ParseAntaresPdf
         private static void WriteOptionName(StreamWriter outFile, string name)
         {
             bool wroteOptionName = false;
-            foreach (var option in Options)
+            foreach (var option in new Options())
             {
                 var index = name.IndexOf(option.Name);
                 if (index != -1)
@@ -296,14 +214,15 @@ namespace ParseAntaresPdf
                 return;
             }
 
-            if (Models.Contains(line, new CompareIgnoreSpaces()))
+            var adjustedModelName = Models.GetAdjustedName(line);
+            if (adjustedModelName != null)
             {
                 CloseTag(outFile, false, true, true);
 
                 inModel = true;
                 nextLine = LineType.UnitTypePointsValueLimited;
                 outFile.WriteLine("\t\t<model>");
-                outFile.WriteLine("\t\t\t<name>" + line + "</name>");
+                outFile.WriteLine("\t\t\t<name>" + adjustedModelName + "</name>");
                 return;
             }
 
