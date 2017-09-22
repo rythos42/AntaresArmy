@@ -20,7 +20,7 @@ module.exports = function (grunt) {
                     port: 21,
                     authKey: 'key1'
                 },
-                src: '.',
+                src: './Web',
                 dest: 'public_html/Antares',
                 exclusions: [
                 '.gitignore', 
