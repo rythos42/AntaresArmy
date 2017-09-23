@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-pdf "C:\work\Local\AntaresArmy\ParseAntaresPdf\bin\Debug\Freeborn Antares Army List V2.0 pdf.pdf" -out C:\work\Local\AntaresArmy\Web\armylists\Freeborn.xml</StartArguments>
+    <StartArguments>-pdf "C:\work\Local\AntaresArmy\ParseAntaresPdf\bin\Debug\Concord Antares Army List V2.0 pdf.pdf"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>

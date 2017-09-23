@@ -21,6 +21,11 @@ namespace ParseAntaresPdf
         private static LineType nextLine;
         private static StringBuilder currentOptions = new StringBuilder();
 
+        private static Units units;
+        private static Options options;
+        private static IgnoreLines ignoreLines;
+        private static Sections sections;
+
         private const string AmmoTypes = "Scrambler, Arc, Blur, Scoot, Net and Grip";
 
 
@@ -44,6 +49,11 @@ namespace ParseAntaresPdf
             StreamWriter outFile = new StreamWriter(outputFileName);
             outFile.WriteLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 
+            units = new Units();
+            options = new Options();
+            ignoreLines = new IgnoreLines();
+            sections = new Sections();
+
             var lines = output.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
             foreach (var line in lines)
             {
@@ -62,7 +72,7 @@ namespace ParseAntaresPdf
         private static void ShowHelp()
         {
             Console.WriteLine("ParseAntaresPdf -pdf <input file> [-out <output file>] [-debugWholeOutput] [-debugWholeOptionsOutput] [-debugIndividualOptionsOutput]");
-            Console.WriteLine("\tRealistically, the debug options are only really useful for developers. Instead of writing the expected XML, they will write a variety of levels of debug based on the parsed PDF, to assist in tracking down how to update this program code to work around issues found in parsing.");
+            Console.WriteLine("\tFor the debug options, instead of writing the expected XML, they will write a variety of levels of debug based on the parsed PDF, to assist in tracking down how to update this program code to work around issues found in parsing. They can be helpful in determining what to add/move around in the .json data files to make the list work.");
             Console.ReadLine();
         }
 
@@ -145,7 +155,7 @@ namespace ParseAntaresPdf
         private static void WriteOptionName(StreamWriter outFile, string name)
         {
             bool wroteOptionName = false;
-            foreach (var option in new Options())
+            foreach (var option in options.GetOptions())
             {
                 var index = name.IndexOf(option.Name);
                 if (index != -1)
@@ -205,7 +215,7 @@ namespace ParseAntaresPdf
                 return;
             }
 
-            if (Sections.Contains(line))
+            if (sections.Contains(line))
             {
                 CloseTag(outFile, true, true, true);
 
@@ -214,7 +224,7 @@ namespace ParseAntaresPdf
                 return;
             }
 
-            var adjustedModelName = Models.GetAdjustedName(line);
+            var adjustedModelName = units.GetAdjustedName(line);
             if (adjustedModelName != null)
             {
                 CloseTag(outFile, false, true, true);
@@ -260,7 +270,7 @@ namespace ParseAntaresPdf
                 return;
             }
 
-            if(IgnoreLines.Contains(line))
+            if(ignoreLines.Contains(line))
                 return;
 
             if (inOptions)

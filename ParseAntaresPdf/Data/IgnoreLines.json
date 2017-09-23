@@ -1,0 +1,10 @@
+﻿/*
+ * This is to ignore/remove random nonsense lines from the parsed PDF. These lines are ones that have no value in the desired XML output.
+ */
+[
+  "Concord Army List",
+  "•     ",
+  "*Note this is a discounted value because it’s an either/or unit choice for ",
+  "Exchange any or all twin Plasma Carbines for  ",
+  "Plasma Lance @Free a weapon that already carries a ‘premium weapon’ points adjustment"
+]

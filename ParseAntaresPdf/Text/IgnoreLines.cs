@@ -1,24 +1,28 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace ParseAntaresPdf.Text
 {
-    public static class IgnoreLines
+    public class IgnoreLines
     {
-        /*
-         * This is to ignore/remove random nonsense lines from the parsed PDF. These lines are ones that have no value in the desired XML output.
-         */
-        private static readonly string[] Lines =
-        {
-            "Concord Army List",
-            "•     ",
-            "*Note this is a discounted value because it’s an either/or unit choice for ",
-            "Exchange any or all twin Plasma Carbines for  ",
-            "Plasma Lance @Free a weapon that already carries a ‘premium weapon’ points adjustment"
-        };
+        private string[] ignoreLines;
 
-        public static bool Contains(string contains)
+        public IgnoreLines()
         {
-            return Lines.Contains(contains);
+            Load();
+        }
+
+        private void Load()
+        {
+            var inFile = new StreamReader("Data\\IgnoreLines.json");
+            var unitsJson = inFile.ReadToEnd();
+            ignoreLines = JsonConvert.DeserializeObject<string[]>(unitsJson);
+        }
+
+        public bool Contains(string contains)
+        {
+            return ignoreLines.Contains(contains);
         }
     }
 }

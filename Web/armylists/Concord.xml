@@ -228,7 +228,7 @@
 	</section>
 	<section name="SUPPORT">
 		<model>
-			<name>C3 INTERCEPTOR  COMMAND SQUAD</name>
+			<name>C3 INTERCEPTOR COMMAND SQUAD</name>
 			<unit-type>Mounted Command Unit</unit-type>
 			<points>165</points>
 			<is-limited>true</is-limited>
@@ -252,7 +252,7 @@
 			</options>
 		</model>
 		<model>
-			<name>C3 INTERCEPTOR  SQUAD</name>
+			<name>C3 INTERCEPTOR SQUAD</name>
 			<unit-type>Mounted Unit</unit-type>
 			<points>133</points>
 			<is-limited>false</is-limited>
@@ -352,7 +352,7 @@
 			</options>
 		</model>
 		<model>
-			<name>CONCORD T7  TRANSPORTER DRONE</name>
+			<name>CONCORD T7 TRANSPORTER DRONE</name>
 			<unit-type>Vehicle Unit</unit-type>
 			<points>96</points>
 			<is-limited>false</is-limited>
@@ -572,7 +572,7 @@
 			<is-limited>false</is-limited>
 			<options>
 				<option>
-					<name>X-Howitzer</name>
+					<name>Fractal Bombard</name>
 					<points>25</points>
 				</option>
 				<option>

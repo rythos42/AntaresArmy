@@ -37,6 +37,10 @@
       <HintPath>packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,10 +55,10 @@
     <Compile Include="CommandLineArguments.cs" />
     <Compile Include="CompareIgnoreSpaces.cs" />
     <Compile Include="Text\IgnoreLines.cs" />
-    <Compile Include="Text\Models.cs" />
     <Compile Include="Option.cs" />
     <Compile Include="Text\Options.cs" />
     <Compile Include="Text\Sections.cs" />
+    <Compile Include="Text\Units.cs" />
     <Compile Include="TopToBottomTextExtractionStrategy.cs" />
     <Compile Include="LineTypes.cs" />
     <Compile Include="Program.cs" />
@@ -62,7 +66,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="Data\Options.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\IgnoreLines.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Sections.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Units.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

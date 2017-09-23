@@ -1,0 +1,9 @@
+﻿/*
+ * These words are all on their own in the parsed PDFs. If a line exactly matches one of these, open a new <section> tag.
+ */
+[
+  "TACTICAL",
+  "STRATEGIC",
+  "SUPPORT",
+  "AUXILIARY" 
+]

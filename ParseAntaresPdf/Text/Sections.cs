@@ -1,17 +1,28 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace ParseAntaresPdf.Text
 {
-    public static class Sections
+    public class Sections
     {
-        /*
-         * These words are all on their own in the parsed PDFs. If a line exactly matches one of these, open a new <section> tag.
-         */
-        private static readonly string[] Names = { "TACTICAL", "STRATEGIC", "SUPPORT", "AUXILIARY" };
+        private string[] sections;
 
-        public static bool Contains(string contains)
+        public Sections()
         {
-            return Names.Contains(contains);
+            Load();
+        }
+
+        private void Load()
+        {
+            var inFile = new StreamReader("Data\\Sections.json");
+            var unitsJson = inFile.ReadToEnd();
+            sections = JsonConvert.DeserializeObject<string[]>(unitsJson);
+        }
+
+        public bool Contains(string contains)
+        {
+            return sections.Contains(contains);
         }
     }
 }

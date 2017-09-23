@@ -1,0 +1,95 @@
+﻿/*
+ * When writing out <option> tags inside <options>, if it finds a match to one of these strings, it will write this string instead of the original one.
+ * This converts lines like "Upgrade a Strike Leader to Leader 2" to a simpler string "Leader 2". It also removes all weirdness from the PDF parsing
+ * (extra dots, spacing, extra words, etc).
+ * 
+ * Careful if you re-order these or add new ones.
+ * The algorithm runs top to bottom, so if a line matches an earlier option "Trooper" when it should match a later one, it will output wrong.
+ * Generally: More general sounding items must be later in the list than more specific items
+ */
+[
+  {
+    "name": "increasing  capability",
+    "replacement": "Enhanced Machine Intelligence"
+  }, // the parsing is weird here - the lines don't match up, so this is a hack to cover for it.
+  {
+    "name": "kinetic armour",
+    "replacement": "Kinetic Armour"
+  },
+  {
+    "name": "or Plasma Pistol instead of Mag Gun",
+    "replacement": "Mag Repeater or Plasma Pistol"
+  }, // as with "increasing  capability" the lines are mismatched, so this line doesn't have the Mag Repeater on it. This is a hack.
+  { "name": "Misgenic Abilities" },
+  { "name": "Rejects" },
+  { "name": "MOD 2 and Res 8(9)" }, // must be above MOD2
+  { "name": "MOD 2" },
+  { "name": "Spotter Drone" },
+  { "name": "Leader Plasma Pistol" }, // must be above Plasma Pistol
+  { "name": "Plasma Pistol" },
+  { "name": "Mag Guns" },
+  { "name": "Leader Mag Gun" },
+  { "name": "Medi-Drone" },
+  { "name": "HL Booster" },
+  { "name": "Captain a Compression Carbine" },
+  { "name": "Bodyguard Compression Carbine" }, // must be above Bodyguard
+  { "name": "Bodyguard" },
+  { "name": "Phase Armour" }, // must be above Reflex Armour
+  { "name": "Hyperlight Armour" }, // must be above Impact Cloaks and Reflex Armour
+  { "name": "Reflex Armour" },
+  { "name": "Impact Cloaks" },
+  { "name": "Medi-Probes" },
+  { "name": "Plasma Grenade" },
+  { "name": "Soma Grafts" }, // must be above Soma Graft
+  { "name": "Soma Graft" },
+  { "name": "Renegade Meld" },
+  { "name": "Nano Drone" },
+  { "name": "Vardanari Guard" },
+  { "name": "Feral Fighters" },
+  { "name": "Micro-X Launcher" },
+  { "name": "Synchoniser Drone" },
+  { "name": "Synchroniser Drone" },
+  { "name": "SlingNet Ammo" },
+  { "name": "Shield Drone" },
+  { "name": "Weapon Drone" },
+  { "name": "Batter Drone" },
+  { "name": "Scrambler, Arc, Blur, Scoot, Net and Grip" },
+  { "name": "Scrambler, Arc, Blur, Scoot, Net or Grip" },
+  { "name": "X-launcher" },
+  { "name": "X-Launcher" },
+  { "name": "Fractal Bombard" }, // must be above X-Howitzer
+  { "name": "X-Howitzer" },
+  { "name": "Mag Mortar" },
+  { "name": "Nano-probe Net" },
+  { "name": "Self-Repair" },
+  { "name": "Self Repair" },
+  { "name": "Nano-probes" },
+  { "name": "Hound Probe" },
+  { "name": "Compactor Drone with compacted Plasma Cannon" },
+  { "name": "Fractal Cannon" },
+  { "name": "Mag Cannon" },
+  { "name": "Compression Cannon" },
+  { "name": "Plasma Cannon" },
+  { "name": "Plasma Bombard" },
+  { "name": "Compression Bombard" },
+  { "name": "Twin Mag Light Support" }, // must be above Mag Light Support
+  { "name": "Mag Light Support" }, // must be above Mag Repeater
+  { "name": "Mag Heavy Support" },
+  { "name": "Mag Launcher Rack" },
+  { "name": "Heavy Mag Cannon" },
+  { "name": "Sensor Module" },
+  { "name": "Subverter Matrix" },
+  { "name": "Scout Probes" },
+  { "name": "Targeter Probe" },
+  { "name": "Compactor Drone" },
+  { "name": "Leader Plasma Carbine" }, // must be above Plasma Carbine and Leader
+  { "name": "Leader 3" }, // must be above Leader
+  { "name": "Leader 2" }, // must be above Leader
+  { "name": "Leader" }, // must be above Freeborn
+  { "name": "Freeborn" },
+  { "name": "Plasma Lance" }, // must be above Plasma Carbine and above Trooper
+  { "name": "Trooper" }, // must be above Plasma Lance
+  { "name": "Gun Drones with Plasma Carbines" }, // must be above Plasma Carbine
+  { "name": "Plasma Light Support" }, // must be above Plasma Carbine for M407
+  { "name": "Plasma Carbine" }
+]
