@@ -10,9 +10,9 @@ namespace ParseAntaresPdf
 {
     public static class Program
     {
-        private static bool debugWholeOutput;
-        private static bool debugWholeOptionsOutput;
-        private static bool debugIndividualOptionsOutput;
+        private static bool debugVerbose;
+        private static bool debugWholeOptions;
+        private static bool debugIndividualOptions;
 
         private static bool inArmyList;
         private static bool inSection;
@@ -41,9 +41,9 @@ namespace ParseAntaresPdf
 
             var output = ReadPdfFile(inputFileName);
 
-            debugWholeOutput = commandLineArgs.HasArg("debugWholeOutput");
-            debugWholeOptionsOutput = commandLineArgs.HasArg("debugWholeOptionsOutput");
-            debugIndividualOptionsOutput = commandLineArgs.HasArg("debugIndividualOptionsOutput");
+            debugVerbose = commandLineArgs.HasArg("debugVerbose");
+            debugWholeOptions = commandLineArgs.HasArg("debugWholeOptions");
+            debugIndividualOptions = commandLineArgs.HasArg("debugIndividualOptions");
 
             var outputFileName = commandLineArgs.GetKeyValue("out") ?? "Output.xml";
             StreamWriter outFile = new StreamWriter(outputFileName);
@@ -57,7 +57,7 @@ namespace ParseAntaresPdf
             var lines = output.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
             foreach (var line in lines)
             {
-                if (debugWholeOutput)
+                if (debugVerbose)
                     outFile.WriteLine("<line>" + line + "</line>");
                 else
                     DealWithLine(line, outFile);
@@ -71,7 +71,7 @@ namespace ParseAntaresPdf
 
         private static void ShowHelp()
         {
-            Console.WriteLine("ParseAntaresPdf -pdf <input file> [-out <output file>] [-debugWholeOutput] [-debugWholeOptionsOutput] [-debugIndividualOptionsOutput]");
+            Console.WriteLine("ParseAntaresPdf -pdf <input file> [-out <output file>] [-debugVerbose] [-debugWholeOptions] [-debugIndividualOptions]");
             Console.WriteLine("\tFor the debug options, instead of writing the expected XML, they will write a variety of levels of debug based on the parsed PDF, to assist in tracking down how to update this program code to work around issues found in parsing. They can be helpful in determining what to add/move around in the .json data files to make the list work.");
             Console.ReadLine();
         }
@@ -118,7 +118,7 @@ namespace ParseAntaresPdf
 
         private static void WriteCurrentOptions(StreamWriter outFile)
         {
-            if (debugWholeOptionsOutput)
+            if (debugWholeOptions)
             {
                 outFile.WriteLine(currentOptions);
                 return;
@@ -127,7 +127,7 @@ namespace ParseAntaresPdf
             var options = currentOptions.ToString().Split(new[] {"@"}, StringSplitOptions.RemoveEmptyEntries);
             for(int i = 0; i < options.Length - 1; i++)
             {
-                if (debugIndividualOptionsOutput)
+                if (debugIndividualOptions)
                 {
                     outFile.WriteLine("\t\t\t\t<option>" + options[i] + "</option>");
                     continue;
@@ -148,7 +148,7 @@ namespace ParseAntaresPdf
                 outFile.WriteLine("\t\t\t\t</option>");
             }
 
-            if (debugIndividualOptionsOutput)  // output the last line for debugging
+            if (debugIndividualOptions)  // output the last line for debugging
                 outFile.WriteLine("\t\t\t\t<not-option>" + options[options.Length - 1] + "</not-option>");
         }
 
