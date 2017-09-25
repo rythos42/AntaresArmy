@@ -157,7 +157,10 @@ namespace ParseAntaresPdf
             bool wroteOptionName = false;
             foreach (var option in options.GetOptions())
             {
-                var index = name.IndexOf(option.Name);
+                var optionNameNoSpace = option.Name.Replace(" ", "");
+                var nameNoSpace = name.Replace(" ", "");
+
+                var index = nameNoSpace.IndexOf(optionNameNoSpace, StringComparison.OrdinalIgnoreCase);
                 if (index != -1)
                 {
                     var toBeWritten = option.Replacement ?? option.Name;

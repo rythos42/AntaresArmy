@@ -8,11 +8,26 @@
  * Generally: More general sounding items must be later in the list than more specific items
  */
 [
-  { "name": "increasing  capability", "replacement": "Enhanced Machine Intelligence" }, // the parsing is weird here - the lines don't match up, so this is a hack to cover for it.
-  { "name": "fixed-emission armour upgrade", "replacement" : "Fixed-emission Armour" }, 
-  { "name": "kinetic armour", "replacement": "Kinetic Armour" },
-  { "name": "HL Booster armour", "replacement": "HL Booster Armour" },
-  { "name": "or Plasma Pistol instead of Mag Gun", "replacement": "Mag Repeater or Plasma Pistol" }, // as with "increasing  capability" the lines are mismatched, so this line doesn't have the Mag Repeater on it. This is a hack.
+  {
+    "name": "increasing  capability",
+    "replacement": "Enhanced Machine Intelligence"
+  }, // the parsing is weird here - the lines don't match up, so this is a hack to cover for it.
+  {
+    "name": "fixed-emission armour upgrade",
+    "replacement": "Fixed-emission Armour"
+  },
+  {
+    "name": "kinetic armour",
+    "replacement": "Kinetic Armour"
+  },
+  {
+    "name": "HL Booster armour",
+    "replacement": "HL Booster Armour"
+  },
+  {
+    "name": "or Plasma Pistol instead of Mag Gun",
+    "replacement": "Mag Repeater or Plasma Pistol"
+  }, // as with "increasing  capability" the lines are mismatched, so this line doesn't have the Mag Repeater on it. This is a hack.
   { "name": "Misgenic Abilities" },
   { "name": "Rejects" },
   { "name": "MOD 2 and Res 8(9)" }, // must be above MOD2
@@ -20,12 +35,11 @@
   { "name": "Spotter Drone" },
   { "name": "Leader Plasma Pistol" }, // must be above Plasma Pistol
   { "name": "Plasma Pistol" },
-  { "name": "Mag Guns or Mag Repeaters" },  // must be above Mag Guns
+  { "name": "Mag Guns or Mag Repeaters" }, // must be above Mag Guns
   { "name": "Mag Guns" },
   { "name": "Leader Mag Gun or Mag Repeater" }, // must be above Leader Mag Gun
   { "name": "Leader Mag Gun" },
   { "name": "Medi-Drone" },
-  { "name": "Medi-drone" },
   { "name": "HL Booster" },
   { "name": "Captain a Compression Carbine" },
   { "name": "Bodyguard Compression Carbine" }, // must be above Bodyguard
@@ -42,37 +56,36 @@
   { "name": "Nano Drone" },
   { "name": "Vardanari Guard" },
   { "name": "Feral Fighters" },
-  { "name": "Overload Ammo" },  // must be above Micro-X Launcher
-  { "name": "SlingNet Ammo" },  // must be above Micro-X Launcher
+  { "name": "Overload Ammo" }, // must be above Micro-X Launcher
+  { "name": "SlingNet Ammo" }, // must be above Micro-X Launcher
   { "name": "Micro-X Launcher" },
   { "name": "Synchoniser Drone" },
   { "name": "Synchroniser Drone" },
   { "name": "Shield Drone" },
+  { "name": "Self-Repair" }, // must be above Weapon Drone
+  { "name": "Self Repair" }, // must be above Weapon Drone
+  { "name": "Phaseshift Shield" }, // must be above Weapon Drone
+  { "name": "Compression Cannon" }, // must be above Fractal Cannon and Plasma Cannon
+  { "name": "Compactor Drone with compacted Plasma Cannon" }, // must be above Plasma Cannon
+  { "name": "Plasma Cannon" }, // must be above Weapon Drone
   { "name": "Weapon Drone" },
   { "name": "Batter Drone" },
   { "name": "Scrambler, Arc, Blur, Scoot, Net and Grip" },
   { "name": "Scrambler, Arc, Blur, Scoot, Net or Grip" },
-  { "name": "X-launcher" },
   { "name": "X-Launcher" },
   { "name": "Fractal Bombard" }, // must be above X-Howitzer
+  { "name": "Plasma Bombard" }, // must be above X-Howitzer
   { "name": "X-Howitzer" },
   { "name": "Mag Mortar" },
   { "name": "Nano-probe Net" },
-  { "name": "Self-Repair" },
-  { "name": "Self Repair" },
   { "name": "Nano-probes" },
   { "name": "Hound Probe" },
-  { "name": "Compactor Drone with compacted Plasma Cannon" },
-  { "name": "Compression Cannon" }, // must be above Fractal Cannon
   { "name": "Fractal Cannon" },
   { "name": "Twin Mag Light Support" }, // must be above Mag Light Support and Heavy Mag Cannon
   { "name": "Heavy Mag Cannon" }, // must be above Mag Cannon
   { "name": "Mag Cannon" },
-  { "name": "Plasma Cannon" },
-  { "name": "Plasma Bombard" },
   { "name": "Compression Bombard" },
   { "name": "Compactor Drone with compacted Mag Light Support" }, // must be above Mag Light Support
-  { "name": "twin Mag Light Support", "replacement": "Twin Mag Light Support" }, // must be above Mag Light Support
   { "name": "Mag Light Support" }, // must be above Mag Repeater
   { "name": "Mag Heavy Support" },
   { "name": "Mag Launcher Rack" },
@@ -96,5 +109,8 @@
   { "name": "Homer Drone" },
   { "name": "Camo Drone" },
   { "name": "Solar Charges" },
-  { "name": "Pistol", "replacement": "Mag Gun or Mag Repeater"} // must be below anything with Pistol in it. This one is really unfortunate - AI Medic Team parsing leaves "Pistol" on it's own line, when it should be matched with Mag Gun or Mag Repeater
+  {
+    "name": "Pistol",
+    "replacement": "Mag Gun or Mag Repeater"
+  } // must be below anything with Pistol in it. This one is really unfortunate - AI Medic Team parsing leaves "Pistol" on it's own line, when it should be matched with Mag Gun or Mag Repeater
 ]

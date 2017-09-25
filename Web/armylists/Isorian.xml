@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<army-list type="Concord">
+<army-list type="Isorian">
 	<section name="TACTICAL">
 		<model>
-			<name>C3 STRIKE COMMAND SQUAD</name>
+			<name>SENATEX COMMAND SQUAD</name>
 			<unit-type>Infantry Command Unit</unit-type>
 			<points>110</points>
 			<is-limited>true</is-limited>
@@ -38,7 +38,7 @@
 			</options>
 		</model>
 		<model>
-			<name>NUHU MANDARIN</name>
+			<name>NUHU SENATEXIS</name>
 			<unit-type>Infantry Command Unit</unit-type>
 			<points>130</points>
 			<is-limited>true</is-limited>
@@ -62,95 +62,7 @@
 			</options>
 		</model>
 		<model>
-			<name>C3 DROP COMMAND SQUAD</name>
-			<unit-type>Infantry Command Unit</unit-type>
-			<points>132</points>
-			<is-limited>true</is-limited>
-			<options>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Plasma Grenade</name>
-					<points>2</points>
-				</option>
-				<option>
-					<name>Medi-Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>SlingNet Ammo</name>
-					<points>5</points>
-				</option>
-				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Leader 3</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Trooper</name>
-					<points>30</points>
-				</option>
-			</options>
-		</model>
-		<model>
-			<name>CONCORD DRONE COMMANDER</name>
-			<unit-type>Weapon Drone Command Unit</unit-type>
-			<points>51</points>
-			<is-limited>true</is-limited>
-			<options>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Weapon Drone</name>
-					<points>59</points>
-				</option>
-				<option>
-					<name>Batter Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Leader 2</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Nano-probe Net</name>
-					<points>30</points>
-				</option>
-				<option>
-					<name>Shield Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Self-Repair</name>
-					<points>10</points>
-				</option>
-			</options>
-		</model>
-		<model>
-			<name>NANO-PROBE NET</name>
-			<unit-type>Probe Unit</unit-type>
-			<points>30</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Nano-probes</name>
-					<points>5</points>
-				</option>
-			</options>
-		</model>
-		<model>
-			<name>C3 STRIKE SQUAD</name>
+			<name>SENATEX PHASE SQUAD</name>
 			<unit-type>Infantry Unit</unit-type>
 			<points>112</points>
 			<is-limited>false</is-limited>
@@ -176,59 +88,17 @@
 					<points>20</points>
 				</option>
 				<option>
-					<name>Leader 2</name>
-					<points>10</points>
-				</option>
-				<option>
 					<name>SlingNet Ammo</name>
 					<points>5</points>
-				</option>
-			</options>
-		</model>
-		<model>
-			<name>C3 DROP SQUAD</name>
-			<unit-type>Infantry Unit</unit-type>
-			<points>151</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
 				</option>
 				<option>
 					<name>Leader 2</name>
 					<points>10</points>
 				</option>
-				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Leader 3</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Trooper</name>
-					<points>28</points>
-				</option>
-				<option>
-					<name>Plasma Lance</name>
-					<points>1</points>
-				</option>
-				<option>
-					<name>SlingNet Ammo</name>
-					<points>5</points>
-				</option>
-				<option>
-					<name>Plasma Grenade</name>
-					<points>2</points>
-				</option>
 			</options>
 		</model>
-	</section>
-	<section name="SUPPORT">
 		<model>
-			<name>C3 INTERCEPTOR COMMAND SQUAD</name>
+			<name>PULSE BIKE COMMAND SQUAD</name>
 			<unit-type>Mounted Command Unit</unit-type>
 			<points>165</points>
 			<is-limited>true</is-limited>
@@ -246,13 +116,17 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Compactor Drone with compacted Plasma Cannon</name>
+					<name>Plasma Cannon</name>
 					<points>25</points>
+				</option>
+				<option>
+					<name>Plasma Lance</name>
+					<points>0</points>
 				</option>
 			</options>
 		</model>
 		<model>
-			<name>C3 INTERCEPTOR SQUAD</name>
+			<name>PULSE BIKE SQUAD</name>
 			<unit-type>Mounted Unit</unit-type>
 			<points>133</points>
 			<is-limited>false</is-limited>
@@ -270,13 +144,143 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Compactor Drone with compacted Plasma Cannon</name>
+					<name>Plasma Cannon</name>
 					<points>25</points>
+				</option>
+				<option>
+					<name>Plasma Lance</name>
+					<points>0</points>
 				</option>
 			</options>
 		</model>
 		<model>
-			<name>C3 STRIKE SUPPORT TEAM</name>
+			<name>TSAN RA PHASE SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>93</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>27</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>TSAN RA TORUS SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>91</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>27</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>TSAN RA COMMAND SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>131</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Medi-Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>29</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="SUPPORT">
+		<model>
+			<name>SENATEX PHASE SNIPER</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>56</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Camo Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>SENATEX SUPPORT TEAM</name>
 			<unit-type>Weapon Team Unit</unit-type>
 			<points>40</points>
 			<is-limited>false</is-limited>
@@ -320,7 +324,7 @@
 			</options>
 		</model>
 		<model>
-			<name>CONCORD C3D1 LIGHT SUPPORT DRONE</name>
+			<name>NHAMAK SC LIGHT SUPPORT DRONE</name>
 			<unit-type>Weapon Drone Unit</unit-type>
 			<points>59</points>
 			<is-limited>false</is-limited>
@@ -330,29 +334,33 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
+					<name>Weapon Drone</name>
+					<points>59</points>
 				</option>
 				<option>
 					<name>Batter Drone</name>
 					<points>20</points>
 				</option>
 				<option>
-					<name>Weapon Drone</name>
-					<points>59</points>
+					<name>Self Repair</name>
+					<points>10</points>
 				</option>
 				<option>
 					<name>Shield Drone</name>
 					<points>10</points>
 				</option>
 				<option>
-					<name>Self Repair</name>
+					<name>Phaseshift Shield</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
 				</option>
 			</options>
 		</model>
 		<model>
-			<name>CONCORD T7 TRANSPORTER DRONE</name>
+			<name>TOGRAH MV2 TRANSPORTER DRONE</name>
 			<unit-type>Vehicle Unit</unit-type>
 			<points>96</points>
 			<is-limited>false</is-limited>
@@ -392,7 +400,7 @@
 			</options>
 		</model>
 		<model>
-			<name>CONCORD C3D2 MEDIUM SUPPORT DRONE</name>
+			<name>ANDHAK SC2 MEDIUM SUPPORT DRONE</name>
 			<unit-type>Weapon Drone Unit</unit-type>
 			<points>83</points>
 			<is-limited>false</is-limited>
@@ -429,12 +437,16 @@
 					<name>Shield Drone</name>
 					<points>10</points>
 				</option>
+				<option>
+					<name>Phaseshift Shield</name>
+					<points>10</points>
+				</option>
 			</options>
 		</model>
 	</section>
 	<section name="STRATEGIC">
 		<model>
-			<name>C3 STRIKE HEAVY SUPPORT TEAM</name>
+			<name>HEAVY SUPPORT TEAM</name>
 			<unit-type>Weapon Team Unit</unit-type>
 			<points>110</points>
 			<is-limited>false</is-limited>
@@ -453,7 +465,7 @@
 				</option>
 				<option>
 					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
-					<points>15</points>
+					<points></points>
 				</option>
 				<option>
 					<name>Trooper</name>
@@ -478,7 +490,7 @@
 			</options>
 		</model>
 		<model>
-			<name>CONCORD C3M4 COMBAT DRONE</name>
+			<name>MAHRAN VESH MV5 COMBAT DRONE</name>
 			<unit-type>Vehicle Unit</unit-type>
 			<points>249</points>
 			<is-limited>false</is-limited>
@@ -496,7 +508,7 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Shield Drone</name>
+					<name>Self Repair</name>
 					<points>10</points>
 				</option>
 				<option>
@@ -504,73 +516,25 @@
 					<points>20</points>
 				</option>
 				<option>
-					<name>Self Repair</name>
-					<points>10</points>
-				</option>
-			</options>
-		</model>
-		<model>
-			<name>CONCORD C3M407 (CS) CLOSE SUPPORT DRONE</name>
-			<unit-type>Vehicle Unit</unit-type>
-			<points>240</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Plasma Light Support</name>
-					<points>22</points>
-				</option>
-				<option>
-					<name>Spotter Drone</name>
+					<name>Phaseshift Shield</name>
 					<points>10</points>
 				</option>
 				<option>
 					<name>Shield Drone</name>
 					<points>10</points>
 				</option>
-				<option>
-					<name>Batter Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Self Repair</name>
-					<points>10</points>
-				</option>
 			</options>
 		</model>
 		<model>
-			<name>CONCORD C3M25 HEAVY COMBAT DRONE</name>
-			<unit-type>Vehicle Unit</unit-type>
-			<points>418</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Plasma Bombard</name>
-					<points>25</points>
-				</option>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Shield Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Batter Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Self Repair</name>
-					<points>10</points>
-				</option>
-			</options>
-		</model>
-		<model>
-			<name>CONCORD C3M50 HEAVY SUPPORT DRONE</name>
+			<name>KAHLOC KV HEAVY BATTLE DRONE</name>
 			<unit-type>Vehicle Unit</unit-type>
 			<points>408</points>
 			<is-limited>false</is-limited>
 			<options>
+				<option>
+					<name>Plasma Bombard</name>
+					<points>10</points>
+				</option>
 				<option>
 					<name>Fractal Bombard</name>
 					<points>25</points>
@@ -592,7 +556,7 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Shield Drone</name>
+					<name>Self Repair</name>
 					<points>10</points>
 				</option>
 				<option>
@@ -600,7 +564,11 @@
 					<points>20</points>
 				</option>
 				<option>
-					<name>Self Repair</name>
+					<name>Phaseshift Shield</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
 					<points>10</points>
 				</option>
 			</options>
@@ -644,42 +612,10 @@
 			</options>
 		</model>
 		<model>
-			<name>CONCORD ISO-DRONE</name>
+			<name>ISORIAN ISO-DRONE</name>
 			<unit-type>Weapon Drone Unit</unit-type>
 			<points>25</points>
 			<is-limited>false</is-limited>
-		</model>
-		<model>
-			<name>CONCORD C3D1/GP GENERAL PURPOSE DRONE</name>
-			<unit-type>Weapon Drone Unit</unit-type>
-			<points>20</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Batter Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Subverter Matrix</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Shield Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Self Repair</name>
-					<points>10</points>
-				</option>
-			</options>
 		</model>
 	</section>
 </army-list>
