@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<army-list type="Algoryn">
+	<section name="TACTICAL">
+		<model>
+			<name>AI COMMAND SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>104</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Medi-Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Overload Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Synchoniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI ASSAULT COMMAND SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>119</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Medi-Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Overload Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>94</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader Mag Gun or Mag Repeater</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>17</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Micro-X Launcher</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Overload Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI ASSAULT SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>120</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Homer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>22</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI INFILTRATION SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>109</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Overload Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader Mag Repeater</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Camo Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Homer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>18</points>
+				</option>
+				<option>
+					<name>Solar Charges</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="SUPPORT">
+		<model>
+			<name>AI INTRUDER SKIMMER COMMAND SQUAD</name>
+			<unit-type>Mounted Command Unit</unit-type>
+			<points>147</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Compactor Drone</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Compactor Drone with compacted Mag Light Support</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI INTRUDER SKIMMER SQUAD</name>
+			<unit-type>Mounted Unit</unit-type>
+			<points>115</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Compactor Drone with compacted Mag Light Support</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Compactor Drone</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>38</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Mag Light Support</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>X-Launcher</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>14</points>
+				</option>
+				<option>
+					<name>Mag Guns or Mag Repeaters</name>
+					<points>3</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI SPECIALIST SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>68</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Plasma Light Support</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Plasma Cannon</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Fractal Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Compression Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>14</points>
+				</option>
+				<option>
+					<name>Mag Guns or Mag Repeaters</name>
+					<points>3</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>ALGORYN HAZARD COMMAND SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>138</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>32</points>
+				</option>
+				<option>
+					<name>Medi-drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>ALGORYN HAZARD SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>100</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>30</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AVENGER ATTACK SKIMMER</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>128</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>HL Booster</name>
+					<points>24</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Twin Mag Light Support</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>DEFIANT TRANSPORT SKIMMER</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>106</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Mag Light Support</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>30</points>
+				</option>
+				<option>
+					<name>Twin Mag Light Support</name>
+					<points>45</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>HL Booster Armour</name>
+					<points>24</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Fixed-emission Armour</name>
+					<points>48</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="STRATEGIC">
+		<model>
+			<name>AI HEAVY SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>97</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Mag Heavy Support</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Heavy Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Mag Mortar</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>X-Howitzer</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Mag Guns or Mag Repeaters</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>14</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI SPECIALIST HEAVY SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>117</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Plasma Bombard</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Fractal Bombard</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Compression Bombard</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Mag Guns or Mag Repeaters</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>14</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>LIBERATOR COMBAT SKIMMER X01 HI-MAG</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>194</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Twin Mag Light Support</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>LIBERATOR COMBAT SKIMMER X06 PLASMA DESTROYER</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>234</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Plasma Cannon</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>LIBERATOR COMBAT SKIMMER X10 SPECIAL</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>234</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Compression Cannon</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>BASTION HEAVY COMBAT SKIMMER</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>388</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Twin Mag Light Support</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Plasma Light Support</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="AUXILIARY">
+		<model>
+			<name>TARGETER PROBE SHARD</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>20</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Targeter Probe</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>SCOUT PROBE SHARD</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>40</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Scout Probes</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI MEDIC TEAM</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>30</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Mag Gun or Mag Repeater</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Medi-drone</name>
+					<points>20</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>ISO-DRONE</name>
+			<unit-type>Weapon Drone Unit</unit-type>
+			<points>25</points>
+			<is-limited>false</is-limited>
+		</model>
+	</section>
+</army-list>
