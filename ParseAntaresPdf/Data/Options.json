@@ -75,14 +75,14 @@
   { "name": "X-Launcher" },
   { "name": "Fractal Bombard" }, // must be above X-Howitzer
   { "name": "Plasma Bombard" }, // must be above X-Howitzer
+  { "name": "Twin Mag Light Support" }, // must be above Mag Light Support and Heavy Mag Cannon
+  { "name": "Heavy Mag Cannon" }, // must be above Mag Cannon and X-Howitzer
   { "name": "X-Howitzer" },
   { "name": "Mag Mortar" },
   { "name": "Nano-probe Net" },
   { "name": "Nano-probes" },
   { "name": "Hound Probe" },
   { "name": "Fractal Cannon" },
-  { "name": "Twin Mag Light Support" }, // must be above Mag Light Support and Heavy Mag Cannon
-  { "name": "Heavy Mag Cannon" }, // must be above Mag Cannon
   { "name": "Mag Cannon" },
   { "name": "Compression Bombard" },
   { "name": "Compactor Drone with compacted Mag Light Support" }, // must be above Mag Light Support
@@ -95,6 +95,7 @@
   { "name": "Scout Probes" },
   { "name": "Targeter Probe" },
   { "name": "Compactor Drone" },
+  { "name": "Lectro Lash or Tractor Maul" },  // must be above Leader
   { "name": "Leader Plasma Carbine" }, // must be above Plasma Carbine and Leader
   { "name": "Leader Mag Repeater" }, // must be above Leader
   { "name": "Leader 3" }, // must be above Leader
@@ -103,7 +104,7 @@
   { "name": "Freeborn" },
   { "name": "Plasma Lance" }, // must be above Plasma Carbine and above Trooper
   { "name": "Trooper" }, // must be above Plasma Lance
-  { "name": "Gun Drones with Plasma Carbines" }, // must be above Plasma Carbine
+  { "name": "Gun Drones with Plasma Carbines" }, // must be above Plasma Carbine and Gun Drones
   { "name": "Plasma Light Support" }, // must be above Plasma Carbine for M407
   { "name": "Plasma Carbine" },
   { "name": "Homer Drone" },
@@ -112,5 +113,22 @@
   {
     "name": "Pistol",
     "replacement": "Mag Gun or Mag Repeater"
-  } // must be below anything with Pistol in it. This one is really unfortunate - AI Medic Team parsing leaves "Pistol" on it's own line, when it should be matched with Mag Gun or Mag Repeater
+  }, // must be below anything with Pistol in it. This one is really unfortunate - AI Medic Team parsing leaves "Pistol" on it's own line, when it should be matched with Mag Gun or Mag Repeater
+  { "name": "Ganger" },
+  { "name": "Gun Drones" },
+  { "name": "Implosion Grenades" },
+  { "name": "Borer Drone" },
+  { "name": "Vorpal Charges" },
+  { "name": "Lavamite Rock Brood" },
+  { "name": "Suspensor Platform" },
+  { "name": "Hatchling Swarm" },
+  { "name": "Lavamites" },
+  { "name": "Lectro Lances" },
+  { "name": "Rock Rider" },
+  { "name": "Heavy Frag Borer" }, // must be above Frag Borer
+  { "name": "Frag Borer" },
+  { "name": "Hatchling Swarms" },
+  { "name": "Micromite Probes" },
+  { "name": "Lectro Lashes or Tractor Mauls" },
+  { "name": "Enginneer", "replacement":  "Engineer" }
 ]

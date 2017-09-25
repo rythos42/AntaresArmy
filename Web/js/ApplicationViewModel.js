@@ -8,7 +8,7 @@ var ApplicationViewModel = function(armyListXml) {
     self.addedModels = ko.observableArray();
     self.loaded = ko.observable(false);
     self.selectedFaction = ko.observable();
-    self.availableFactions = ko.observableArray(['Concord', 'Freeborn', 'Algoryn', 'Isorian']);
+    self.availableFactions = ko.observableArray(['Concord', 'Freeborn', 'Algoryn', 'Isorian', 'Boromite']);
     
     self.models = ko.computed(function() {
         var xml = armyListXml();

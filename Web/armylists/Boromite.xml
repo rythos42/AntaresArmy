@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<army-list type="Boromite">
+	<section name="TACTICAL">
+		<model>
+			<name>OVERSEER SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>105</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Synchoniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Ganger</name>
+					<points>21</points>
+				</option>
+				<option>
+					<name>Lectro Lash or Tractor Maul</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>MATRIARCH</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>131</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Gun Drones</name>
+					<points>14</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>ROCK FATHER</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>144</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Carbine</name>
+					<points>9</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Lectro Lash or Tractor Maul</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Ganger</name>
+					<points>23</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>GANG FIGHTERS</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>97</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Ganger</name>
+					<points>18</points>
+				</option>
+				<option>
+					<name>Lectro Lash or Tractor Maul</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader Mag Gun</name>
+					<points>3</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>WORK GANG WITH HEAVY TRACTOR MAULS</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>98</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Ganger</name>
+					<points>17</points>
+				</option>
+				<option>
+					<name>Implosion Grenades</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Borer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Vorpal Charges</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>WORK GANG WITH MASS COMPACTORS</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>98</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Ganger</name>
+					<points>17</points>
+				</option>
+				<option>
+					<name>Implosion Grenades</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Borer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Vorpal Charges</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>LAVAMITES</name>
+			<unit-type>Infantry/Beast Unit</unit-type>
+			<points>82</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Borer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Lavamite Rock Brood</name>
+					<points>12</points>
+				</option>
+				<option>
+					<name>Suspensor Platform</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Hatchling Swarm</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Lavamites</name>
+					<points>17</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="SUPPORT">
+		<model>
+			<name>BOROMITE ROCK RIDER OVERSEER SQUAD</name>
+			<unit-type>Mounted Command Unit</unit-type>
+			<points>135</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Lectro Lances</name>
+					<points>4</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Lectro Lash or Tractor Maul</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Rock Rider</name>
+					<points>31</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>BOROMITE ROCK RIDER SQUAD</name>
+			<unit-type>Mounted Unit</unit-type>
+			<points>103</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Lectro Lances</name>
+					<points>4</points>
+				</option>
+				<option>
+					<name>Rock Rider</name>
+					<points>31</points>
+				</option>
+				<option>
+					<name>Lectro Lash or Tractor Maul</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>BOROMITE SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>36</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Mag Light Support</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>X-Launcher</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Frag Borer</name>
+					<points>40</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Borer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Ganger</name>
+					<points>13</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>BOROMITE SPECIALIST SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>66</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Plasma Light Support</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Plasma Cannon</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Borer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Ganger</name>
+					<points>13</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="STRATEGIC">
+		<model>
+			<name>BOROMITE HEAVY SUPPORT TEAM</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>84</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Mag Heavy Support</name>
+					<points>0</points>
+				</option>
+				<option>
+					<name>Heavy Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Heavy Frag Borer</name>
+					<points>35</points>
+				</option>
+				<option>
+					<name>X-Howitzer</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Mag Mortar</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Ganger</name>
+					<points>13</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>MATRONITE BROOD MOTHER</name>
+			<unit-type>Humungous Beast Unit</unit-type>
+			<points>278</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Heavy Mag Cannon</name>
+					<points>35</points>
+				</option>
+				<option>
+					<name>Mag Heavy Support</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Hatchling Swarm</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>BOROMITE HAULER</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>190</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>BOROMITE HEAVY HAULER</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>392</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Heavy Mag Cannon</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Heavy Frag Borer</name>
+					<points>35</points>
+				</option>
+				<option>
+					<name>Compression Bombard</name>
+					<points>45</points>
+				</option>
+				<option>
+					<name>X-Howitzer</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Mag Mortar</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="AUXILIARY">
+		<model>
+			<name>MICROMITE PROBE SHARD</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>20</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Micromite Probes</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>SCOUT PROBE SHARD</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>40</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Scout Probes</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>ROVER DRONE SURVEYOR</name>
+			<unit-type>Weapon Drone Unit</unit-type>
+			<points>75</points>
+			<is-limited>false</is-limited>
+			<options>
+			</options>
+		</model>
+		<model>
+			<name>BOROMITE ENGINEER SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>44</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Engineer</name>
+					<points>12</points>
+				</option>
+				<option>
+					<name>Lectro Lashes or Tractor Mauls</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Pistol</name>
+					<points>4</points>
+				</option>
+				<option>
+					<name>Borer Drone</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Implosion Grenades</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Vorpal Charges</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>CONCORD PATTERN ISO-DRONE</name>
+			<unit-type>Weapon Drone Unit</unit-type>
+			<points>25</points>
+			<is-limited>false</is-limited>
+		</model>
+	</section>
+</army-list>
