@@ -397,6 +397,10 @@
 					<name>Enhanced Machine Intelligence</name>
 					<points>10</points>
 				</option>
+				<option>
+					<name>Phaseshift Shield</name>
+					<points>10</points>
+				</option>
 			</options>
 		</model>
 		<model>
