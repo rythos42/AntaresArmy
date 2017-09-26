@@ -13,6 +13,7 @@ namespace ParseAntaresPdf
         private static bool debugVerbose;
         private static bool debugWholeOptions;
         private static bool debugIndividualOptions;
+        private static bool justText;
 
         private static bool inArmyList;
         private static bool inSection;
@@ -44,34 +45,43 @@ namespace ParseAntaresPdf
             debugVerbose = commandLineArgs.HasArg("debugVerbose");
             debugWholeOptions = commandLineArgs.HasArg("debugWholeOptions");
             debugIndividualOptions = commandLineArgs.HasArg("debugIndividualOptions");
+            justText = commandLineArgs.HasArg("justText");
 
             var outputFileName = commandLineArgs.GetKeyValue("out") ?? "Output.xml";
             StreamWriter outFile = new StreamWriter(outputFileName);
-            outFile.WriteLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 
-            units = new Units();
-            options = new Options();
-            ignoreLines = new IgnoreLines();
-            sections = new Sections();
-
-            var lines = output.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
-            foreach (var line in lines)
+            if (justText)
             {
-                if (debugVerbose)
-                    outFile.WriteLine("<line>" + line + "</line>");
-                else
-                    DealWithLine(line, outFile);
+                outFile.Write(output);
+            }
+            else
+            {
+                outFile.WriteLine("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+
+                units = new Units();
+                options = new Options();
+                ignoreLines = new IgnoreLines();
+                sections = new Sections();
+
+                var lines = output.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines)
+                {
+                    if (debugVerbose)
+                        outFile.WriteLine("<line>" + line + "</line>");
+                    else
+                        DealWithLine(line, outFile);
+                }
+
+                CloseTag(outFile, true, true, true);
+                outFile.WriteLine("</army-list>");
             }
 
-            CloseTag(outFile, true, true, true);
-
-            outFile.WriteLine("</army-list>");
             outFile.Close();
         }
 
         private static void ShowHelp()
         {
-            Console.WriteLine("ParseAntaresPdf -pdf <input file> [-out <output file>] [-debugVerbose] [-debugWholeOptions] [-debugIndividualOptions]");
+            Console.WriteLine("ParseAntaresPdf -pdf <input file> [-out <output file>] [-justText] [-debugVerbose] [-debugWholeOptions] [-debugIndividualOptions]");
             Console.WriteLine("\tFor the debug options, instead of writing the expected XML, they will write a variety of levels of debug based on the parsed PDF, to assist in tracking down how to update this program code to work around issues found in parsing. They can be helpful in determining what to add/move around in the .json data files to make the list work.");
             Console.ReadLine();
         }

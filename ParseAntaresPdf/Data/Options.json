@@ -28,6 +28,7 @@
     "name": "or Plasma Pistol instead of Mag Gun",
     "replacement": "Mag Repeater or Plasma Pistol"
   }, // as with "increasing  capability" the lines are mismatched, so this line doesn't have the Mag Repeater on it. This is a hack.
+  // must be above Mag Gun
   { "name": "Misgenic Abilities" },
   { "name": "Rejects" },
   { "name": "MOD 2 and Res 8(9)" }, // must be above MOD2
@@ -35,10 +36,10 @@
   { "name": "Spotter Drone" },
   { "name": "Leader Plasma Pistol" }, // must be above Plasma Pistol
   { "name": "Plasma Pistol" },
-  { "name": "Mag Guns or Mag Repeaters" }, // must be above Mag Guns
-  { "name": "Mag Guns" },
-  { "name": "Leader Mag Gun or Mag Repeater" }, // must be above Leader Mag Gun
-  { "name": "Leader Mag Gun" },
+  { "name": "Mag Guns or Mag Repeaters" }, // must be above Mag Guns and Mag Gun
+  { "name": "Mag Guns" }, // must be above Mag Gun
+  { "name": "Leader Mag Gun or Mag Repeater" }, // must be above Leader Mag Gun and Mag Gun
+  { "name": "Leader Mag Gun" }, // must be above Mag Gun
   { "name": "Medi-Drone" },
   { "name": "HL Booster" },
   { "name": "Captain a Compression Carbine" },
@@ -86,6 +87,10 @@
   { "name": "Mag Cannon" },
   { "name": "Compression Bombard" },
   { "name": "Compactor Drone with compacted Mag Light Support" }, // must be above Mag Light Support
+  {
+    "name": "per model  of Mag Light Support",
+    "replacement": "Plasma Amplifier"
+  }, // must be above Mag Light Support because of Rebel Creeper
   { "name": "Mag Light Support" }, // must be above Mag Repeater
   { "name": "Mag Heavy Support" },
   { "name": "Mag Launcher Rack" },
@@ -95,7 +100,7 @@
   { "name": "Scout Probes" },
   { "name": "Targeter Probe" },
   { "name": "Compactor Drone" },
-  { "name": "Lectro Lash or Tractor Maul" },  // must be above Leader
+  { "name": "Lectro Lash or Tractor Maul" }, // must be above Leader
   { "name": "Leader Plasma Carbine" }, // must be above Plasma Carbine and Leader
   { "name": "Leader Mag Repeater" }, // must be above Leader
   { "name": "Leader 3" }, // must be above Leader
@@ -130,5 +135,39 @@
   { "name": "Hatchling Swarms" },
   { "name": "Micromite Probes" },
   { "name": "Lectro Lashes or Tractor Mauls" },
-  { "name": "Enginneer", "replacement":  "Engineer" }
+  {
+    "name": "Enginneer",
+    "replacement": "Engineer"
+  },
+  { "name": "Plasma Dump" },
+  { "name": "High Commander" },
+  { "name": "Outcasts with Maglash" }, // must be above Outcast
+  { "name": "Outcasts with Lugger guns" }, // must be above Outcast
+  { "name": "Weapon Team with Disruptor Cannon" }, // must be above Disruptor Cannon
+  { "name": "Outcast" },
+  { "name": "Attack Scutters" }, // must be above Scutter
+  { "name": "Scutter" },
+  {
+    "name": "Scourer Cannons",
+    "replacement": "Twinned Scourer Cannons"
+  },
+  { "name": "Tectorist Scouts" },
+  { "name": "Disruptor Bomber" },
+  { "name": "Flitters" },
+  { "name": "Lugger Ammo" },
+
+  { "name": "Rebels" },
+  { "name": "Maglashes" },
+  { "name": "Plasma Claw" },
+  { "name": "Black Guard" },
+  { "name": "Rebels with Lugger Guns" },
+  { "name": "Disruptor Cannon" },
+  { "name": "Quad Mag Repeater" },
+  { "name": "Rebel Crew" },
+  { "name": "Creepers" },
+  { "name": "Plasma Amplifier" },
+  {
+    "name": "Free of Mag Gun",
+    "replacement": "Plasma Lance"
+  } // Rebel Black Guard Leader Plasma Lance
 ]
