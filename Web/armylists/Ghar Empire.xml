@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<army-list type="Ghar Empire">
+	<section name="TACTICAL">
+		<model>
+			<name>GHAR TACTICAL COMMAND SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>216</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Trooper</name>
+					<points>57</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>High Commander</name>
+					<points>20</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>GHAR BATTLE SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>184</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Trooper</name>
+					<points>57</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>20</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>GHAR ASSAULT SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>184</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Trooper</name>
+					<points>57</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>20</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>OUTCAST COMMAND SQUAD</name>
+			<unit-type>Infantry Command Unit</unit-type>
+			<points>38</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Outcasts with Maglash</name>
+					<points>6</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>OUTCAST SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>42</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Outcasts with Lugger guns</name>
+					<points>6</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Weapon Team with Disruptor Cannon</name>
+					<points>23</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>OUTCAST WEAPON TEAM WITH DISRUPTOR CANNON</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>23</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Outcast</name>
+					<points>4</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>11</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="SUPPORT">
+		<model>
+			<name>COMMAND CRAWLER</name>
+			<unit-type>Vehicle Command Unit</unit-type>
+			<points>242</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Leader 3</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>High Commander</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>GHAR BOMBER SQUAD</name>
+			<unit-type>Infantry Unit/Mixed Infantry+Mount</unit-type>
+			<points>127</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Trooper</name>
+					<points>57</points>
+				</option>
+				<option>
+					<name>Leader 3</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Scutter</name>
+					<points>26</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>ATTACK SCUTTERS</name>
+			<unit-type>Mounted Unit</unit-type>
+			<points>91</points>
+			<is-limited>true</is-limited>
+			<options>
+				<option>
+					<name>Attack Scutters</name>
+					<points>26</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="STRATEGIC">
+		<model>
+			<name>BOMBARDMENT CRAWLER</name>
+			<unit-type>Vehicle Unit/Mixed Vehicle + Mounts</unit-type>
+			<points>258</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Scutter</name>
+					<points>26</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>TRANSPORT DROPPER</name>
+			<unit-type>Vehicle Unit/Drop Capsule</unit-type>
+			<points>179</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Scutter</name>
+					<points>26</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Twinned Scourer Cannons</name>
+					<points>15</points>
+				</option>
+				<option>
+					<name>Disruptor Bomber</name>
+					<points>15</points>
+				</option>
+			</options>
+		</model>
+	</section>
+	<section name="AUXILIARY">
+		<model>
+			<name>TECTORIST SCOUTS</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>20</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Tectorist Scouts</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>FLITTERS</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>20</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Flitters</name>
+					<points>5</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>WRECKER</name>
+			<unit-type>Mounted Unit</unit-type>
+			<points>30</points>
+			<is-limited>false</is-limited>
+		</model>
+		<model>
+			<name>MUNITION SCUTTER</name>
+			<unit-type>Mounted Unit</unit-type>
+			<points>26</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Lugger Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Plasma Amplifier</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+	</section>
+</army-list>

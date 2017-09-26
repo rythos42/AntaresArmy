@@ -1,3 +1,6 @@
+.icon-dots-three-vertical:before {
+  content: "\e900";
+}
 .icon-bin:before {
   content: "\e9ac";
 }
