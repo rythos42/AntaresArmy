@@ -34,6 +34,10 @@ var ApplicationViewModel = function(armyListXml) {
         }, 0);
     });
     
+    self.hasModels = ko.computed(function() {
+        return self.addedModels().length != 0;
+    });
+    
     self.deleteModel = function(modelViewModel) {
         internalAddedModels.remove(modelViewModel.model);
         self.addedModels.remove(modelViewModel);
