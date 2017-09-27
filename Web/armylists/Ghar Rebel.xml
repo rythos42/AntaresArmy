@@ -440,12 +440,24 @@
 			<unit-type>Probe Unit</unit-type>
 			<points>20</points>
 			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Flitters</name>
+					<points>5</points>
+				</option>
+			</options>
 		</model>
 		<model>
 			<name>FLITTER BOMBS</name>
 			<unit-type>Probe Unit</unit-type>
 			<points>40</points>
 			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Flitter Bombs</name>
+					<points>10</points>
+				</option>
+			</options>
 		</model>
 	</section>
 </army-list>
