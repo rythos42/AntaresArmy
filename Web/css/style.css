@@ -8,7 +8,7 @@
 
 #Models {
     border-collapse: separate;
-    border-spacing: 1em;
+    border-spacing: 0 1em;
 }
 
 #Models > tbody > tr {
@@ -17,14 +17,13 @@
 
 #Models td {
     padding: 0.2em;
-    
 }
 
 td.options {
     border-right: 1px dotted black;
 }
 
-.options select {
+#Models select {
     width: 100%;
 }
 
@@ -42,6 +41,7 @@ td.options {
 
 .header .actions {
     text-align: right;
+    padding-top: 3px;
 }
 
 .container {

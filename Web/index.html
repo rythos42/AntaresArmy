@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" integrity="sha256-owX7sroiO/O1a7h3a4X29A1g3QgqdNvijRQ7V5TH45M=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-sortable/1.1.0/knockout-sortable.min.js" integrity="sha256-naKWabT69JO37r5NJ2nJ6laqslSvxhXrWtIqtMji8E8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha256-AAhU14J4Gv8bFupUUcHaPQfvrdNauRHMt+S4UVcaJb0=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   
     <script src="js/ArmyListMapper.js"></script>
@@ -45,7 +46,7 @@
     <div class="container" data-bind="visible: loaded" style="display: none;">
         <div class="header row">
             <div class="col-6">
-                <h2>Antares</h2>
+                <h3>Antares</h3>
             </div>
             <div class="actions col-6">
                 <select data-bind="options: availableFactions, value: selectedFaction"></select>
@@ -53,35 +54,24 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <h3 data-bind="text: selectedFaction"></h3>
-                <select data-bind="options: models, optionsCaption: 'Add model...', value: selectedModel, optionsText: 'name'"></select>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-12">
-                <table id="Models" data-bind="visible: hasModels">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th class="name">Name</th>
-                            <th>Points</th>
-                            <th class="options">Options</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody data-bind="sortable: { data: addedModels, options: { handle: '.sortableHandle', cursor: 'move' } }">
+                <table id="Models">
+                    <tbody data-bind="sortable: { data: addedModels, options: { handle: '.sortableHandle', cursor: 'move' } }, visible: hasModels">
                         <tr>
                             <td class="sortableHandle"><span class="icon-dots-three-vertical"></span></td>
-                            <td class="name" data-bind="text: name" />
-                            <td data-bind="text: points" />
+                            <td class="name">
+                                <span data-bind="text: name"></span>
+                                (<span data-bind="text: points"></span>)
+                            </td>
                             <td class="options">
-                                <select data-bind="options: options, optionsCaption: 'Add option...', value: currentOption, optionsText: 'name'"></select>
+                                <select data-bind="options: options, optionsCaption: 'Add...', value: currentOption, optionsText: 'name'"></select>
                                 <table id="Options" data-bind="visible: hasOptions">
                                     <tbody data-bind="foreach: addedOptions">
                                         <tr>
-                                            <td data-bind="text: name" />
-                                            <td data-bind="text: points" />
+                                            <td>
+                                                <span data-bind="text: name"></span>
+                                                (<span data-bind="text: points"></span>)
+                                            </td>
                                             <td><a href="#" class="link-icon" data-bind="click: $parent.deleteOption"><span class="icon-bin"></span></a></a></td>
                                         </tr>
                                     </tbody>
@@ -92,7 +82,13 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td>Total:</td>
+                            <td colspan="4">
+                                <select data-bind="options: models, optionsCaption: 'Add model...', value: selectedModel, optionsText: 'name'"></select>
+                            </td>
+                        </tr>
+                        <tr data-bind="visible: hasModels">
+                            <td />
+                            <td>Total points:</td>
                             <td data-bind="text: totalPoints">
                             <td />
                         </tr>
