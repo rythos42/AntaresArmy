@@ -1,4 +1,4 @@
-var ApplicationViewModel = function(armyListXml) {
+var ApplicationViewModel = function(gapiLoaded) {
     var self = this,
         armyListXml = ko.observable(),
         mapper = new ArmyListMapper(),
@@ -9,6 +9,8 @@ var ApplicationViewModel = function(armyListXml) {
     self.loaded = ko.observable(false);
     self.selectedFaction = ko.observable();
     self.availableFactions = ko.observableArray(['Concord', 'Freeborn', 'Algoryn', 'Isorian', 'Boromite', 'Ghar Empire', 'Ghar Rebel']);
+    self.shortenedUrl = ko.observable(null);
+    self.showLinkSharing = ko.observable(false);
     
     self.models = ko.computed(function() {
         var xml = armyListXml();
@@ -37,6 +39,10 @@ var ApplicationViewModel = function(armyListXml) {
     self.hasModels = ko.computed(function() {
         return self.addedModels().length != 0;
     });
+        
+    self.hasShortenedUrl = ko.computed(function() {
+        return self.shortenedUrl() !== null;
+    });
     
     self.deleteModel = function(modelViewModel) {
         self.addedModels.remove(modelViewModel);
@@ -46,23 +52,40 @@ var ApplicationViewModel = function(armyListXml) {
         sharing.shareToFacebook(self.addedModels);
     };
     
+    self.shortenUrl = function() {
+        sharing.shortenUrl(self.addedModels, function(shortenedUrl) {
+            self.shortenedUrl(shortenedUrl);
+        });
+    };
+    
     self.copyToClipboard = function() {
-        sharing.copyToClipboard(self.addedModels);
+        sharing.copyShortenedUrlToClipboard(self.addedModels);
     };
             
     self.selectedModel.subscribe(function(selectedModel) {
         if(!selectedModel)
             return;
 
-        self.addedModels.push(new ModelViewModel(selectedModel));
+        var modelViewModel = new ModelViewModel(selectedModel);
+        modelViewModel.currentOption.subscribe(function() {
+            self.shortenedUrl(null);
+        });
+        
+        self.addedModels.push(modelViewModel);
         
         self.selectedModel(null);
+        self.shortenedUrl(null);
     });
     
     self.selectedFaction.subscribe(function(selectedFaction) {
         mapper.load(selectedFaction, function(xml) {
             armyListXml(xml);
         });
+    });
+    
+    gapiLoaded.subscribe(function(isLoaded) {
+        if(isLoaded)
+            self.showLinkSharing(true);
     });
     
     

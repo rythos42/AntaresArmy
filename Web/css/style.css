@@ -47,3 +47,12 @@ td.options {
 .container {
     margin-top: 1em;
 }
+
+#ShortenedUrlTextArea {
+    overflow: hidden;
+    width: 186px;    
+}
+
+.sharing-panel a {
+    font-size: 30px;
+}

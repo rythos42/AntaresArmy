@@ -18,6 +18,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js" integrity="sha256-nRoO8HoupfqozUr7YKBRgHXmdx40Hl/04OSBzv7e7L8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" integrity="sha256-3blsJd4Hli/7wCQ+bmgXfOdK7p/ZUMtPXY08jmxSSgk=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+    <script>
+        function loadGoogleDeveloperClient() {
+            gapi.client.setApiKey('AIzaSyAE0R-34iIGIsarXYevLo49ExZVb_Nrfhs');
+            gapi.client.load('urlshortener', 'v1', function() {
+                gapiLoaded(true);
+            });
+        }
+    </script>
+    
+    <script src="https://apis.google.com/js/client.js?onload=loadGoogleDeveloperClient" async defer></script>
   
     <script src="js/ArmyListMapper.js"></script>
     <script src="js/ApplicationViewModel.js"></script>
@@ -63,8 +74,9 @@
     </script>
     
     <script>
+        var gapiLoaded = ko.observable(false);
         $(document).ready(function() {
-            ko.applyBindings(new ApplicationViewModel());
+            ko.applyBindings(new ApplicationViewModel(gapiLoaded));
         });
     </script>
     
@@ -127,8 +139,14 @@
         <div class="row">
             <div class="col">
                 <h4>Share to...</h4>
-                <a href="#" class="link-icon" data-bind="click: facebookShareList"><span class="icon-facebook2"></span></a>
-                <a href="#" class="link-icon" data-bind="click: copyToClipboard"><span class="icon-paste"></span></a>            
+                <div class="sharing-panel">
+                    <a href="#" class="link-icon" data-bind="click: facebookShareList"><span class="icon-facebook2"></span></a>
+                    <a href="#" class="link-icon" data-bind="click: shortenUrl, visible: showLinkSharing"><span class="icon-link"></span></a>
+                    <span data-bind="visible: hasShortenedUrl">
+                        <textarea id="ShortenedUrlTextArea" data-bind="value: shortenedUrl" rows="1" ></textarea>
+                        <a href="#" class="link-icon" data-bind="click: copyToClipboard"><span class="icon-copy"></span></a>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

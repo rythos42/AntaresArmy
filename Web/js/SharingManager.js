@@ -37,35 +37,24 @@ var SharingManager = function() {
             href: getLink(compressedList),
         }, function(response){});
     };
-            
-    function copyToClipboard(text) {
-        if (window.clipboardData && window.clipboardData.setData) {
-            // IE specific code path to prevent textarea being shown while dialog is visible.
-            return clipboardData.setData("Text", text); 
-
-        } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
-            var textarea = document.createElement("textarea");
-            textarea.textContent = text;
-            document.body.appendChild(textarea);
-            textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
-            textarea.select();
-            try {
-                return document.execCommand("copy");  // Security exception may be thrown by some browsers.
-            } catch (ex) {
-                console.warn("Copy to clipboard failed.", ex);
-                return false;
-            } finally {
-                document.body.removeChild(textarea);
-            }
-        }
-    }
     
-    self.copyToClipboard = function(addedModels) {
+    self.shortenUrl = function(addedModels, callback) {
         var compressedList = createShareable(addedModels()),
             link = getLink(compressedList);
             
-        if(copyToClipboard(link))
-            toastr.success('Shareable link copied to clipboard.')
+        gapi.client.urlshortener.url.insert({ 'longUrl': link }).execute(function (response) {
+            callback(response.id);
+        });
+    };
+        
+    self.copyShortenedUrlToClipboard = function() {
+        try {
+            $('#ShortenedUrlTextArea').select();
+            document.execCommand("copy");  // Security exception may be thrown by some browsers.
+            toastr.success('Shareable link copied to clipboard.');
+        } catch (ex) {
+            toastr.error('Your browser does not support copying.');
+        }
     };
     
     self.tryLoadFromSharingLink = function(addedModels) {
