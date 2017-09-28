@@ -4,18 +4,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <meta property="og:url" content="http://geeksong.com/Antares" />
+    <meta property="og:title" content="AntaresArmy" />
+    <meta property="og:description" content="Quickly tinker with Beyond the Gates of Antares army lists!" />
+    <meta property="fb:app_id" content="1513081352064169" />
+    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js" integrity="sha256-owX7sroiO/O1a7h3a4X29A1g3QgqdNvijRQ7V5TH45M=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-sortable/1.1.0/knockout-sortable.min.js" integrity="sha256-naKWabT69JO37r5NJ2nJ6laqslSvxhXrWtIqtMji8E8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha256-AAhU14J4Gv8bFupUUcHaPQfvrdNauRHMt+S4UVcaJb0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js" integrity="sha256-nRoO8HoupfqozUr7YKBRgHXmdx40Hl/04OSBzv7e7L8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" integrity="sha256-3blsJd4Hli/7wCQ+bmgXfOdK7p/ZUMtPXY08jmxSSgk=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   
     <script src="js/ArmyListMapper.js"></script>
     <script src="js/ApplicationViewModel.js"></script>
     <script src="js/ModelViewModel.js"></script>
     <script src="js/OptionViewModel.js"></script>
+    <script src="js/SharingManager.js"></script>
     <script src="js/Model.js"></script>
     <script src="js/Option.js"></script>
     
@@ -23,6 +31,7 @@
     <link href="css/icomoon.css" rel="stylesheet" />
     <link href="css/icon-fonts.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha256-xykLhwtLN4WyS7cpam2yiUOwr709tvF3N/r7+gOMxJw=" crossorigin="anonymous" />
     
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107068171-1"></script>
@@ -32,6 +41,25 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-107068171-1');
+    </script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '1513081352064169',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
     
     <script>
@@ -94,6 +122,13 @@
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Share to...</h4>
+                <a href="#" class="link-icon" data-bind="click: facebookShareList"><span class="icon-facebook2"></span></a>
+                <a href="#" class="link-icon" data-bind="click: copyToClipboard"><span class="icon-paste"></span></a>            
             </div>
         </div>
     </div>

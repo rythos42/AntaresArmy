@@ -1,9 +1,15 @@
 .icon-dots-three-vertical:before {
   content: "\e900";
 }
+.icon-paste:before {
+  content: "\e92d";
+}
 .icon-bin:before {
   content: "\e9ac";
 }
 .icon-question:before {
   content: "\ea09";
+}
+.icon-facebook2:before {
+  content: "\ea91";
 }

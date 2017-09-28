@@ -1,8 +1,8 @@
 var ApplicationViewModel = function(armyListXml) {
     var self = this,
-        internalAddedModels = ko.observableArray(),
         armyListXml = ko.observable(),
-        mapper = new ArmyListMapper();
+        mapper = new ArmyListMapper(),
+        sharing = new SharingManager();
     
     self.selectedModel = ko.observable();
     self.addedModels = ko.observableArray();
@@ -18,7 +18,7 @@ var ApplicationViewModel = function(armyListXml) {
         return $(xml).find('section').find('model').map(function(index, modelXml) {
             var name = $(modelXml).children('name').html();
             var points = parseInt($(modelXml).children('points').html(), 10);
-            var options = $(modelXml).find('option').map(function(index, optionXml) {
+            var options = $.map($(modelXml).find('option'), function(optionXml) {
                 var optionName = $(optionXml).children('name').html();
                 var optionPoints = parseInt($(optionXml).children('points').html(), 10);
                 return new Option(optionName, optionPoints);
@@ -39,15 +39,21 @@ var ApplicationViewModel = function(armyListXml) {
     });
     
     self.deleteModel = function(modelViewModel) {
-        internalAddedModels.remove(modelViewModel.model);
         self.addedModels.remove(modelViewModel);
+    };
+    
+    self.facebookShareList = function() {
+        sharing.shareToFacebook(self.addedModels);
+    };
+    
+    self.copyToClipboard = function() {
+        sharing.copyToClipboard(self.addedModels);
     };
             
     self.selectedModel.subscribe(function(selectedModel) {
         if(!selectedModel)
             return;
 
-        internalAddedModels.push(selectedModel);
         self.addedModels.push(new ModelViewModel(selectedModel));
         
         self.selectedModel(null);
@@ -59,9 +65,12 @@ var ApplicationViewModel = function(armyListXml) {
         });
     });
     
+    
     // start off loading the first item in the list    
     mapper.load(self.availableFactions()[0], function(xml) {
         armyListXml(xml);
          self.loaded(true);
     });
+    
+    sharing.tryLoadFromSharingLink(self.addedModels);
 };
