@@ -141,10 +141,11 @@
                 <h4>Share to...</h4>
                 <div class="sharing-panel">
                     <a href="#" class="link-icon" data-bind="click: facebookShareList"><span class="icon-facebook2"></span></a>
+                    <a href="#" class="link-icon" data-bind="click: copyListToClipboard"><span class="icon-file-text2"></span></a>
                     <a href="#" class="link-icon" data-bind="click: shortenUrl, visible: showLinkSharing"><span class="icon-link"></span></a>
                     <span data-bind="visible: hasShortenedUrl">
                         <textarea id="ShortenedUrlTextArea" data-bind="value: shortenedUrl" rows="1" ></textarea>
-                        <a href="#" class="link-icon" data-bind="click: copyToClipboard"><span class="icon-copy"></span></a>
+                        <a href="#" class="link-icon" data-bind="click: copyUrlToClipboard"><span class="icon-copy"></span></a>
                     </span>
                 </div>
             </div>

@@ -58,8 +58,12 @@ var ApplicationViewModel = function(gapiLoaded) {
         });
     };
     
-    self.copyToClipboard = function() {
-        sharing.copyShortenedUrlToClipboard(self.addedModels);
+    self.copyUrlToClipboard = function() {
+        sharing.copyShortenedUrlToClipboard();
+    };
+    
+    self.copyListToClipboard = function() {
+        sharing.copyListToClipboard(self.addedModels);
     };
             
     self.selectedModel.subscribe(function(selectedModel) {

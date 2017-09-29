@@ -1,6 +1,9 @@
 .icon-dots-three-vertical:before {
   content: "\e900";
 }
+.icon-file-text2:before {
+  content: "\e926";
+}
 .icon-copy:before {
   content: "\e92c";
 }
