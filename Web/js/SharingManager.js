@@ -93,6 +93,7 @@ var SharingManager = function() {
         });
         list += 'Total: ' + total;
         copyToClipboard(list);
+        toastr.success('Text list copied to clipboard.');
     };
     
     self.tryLoadFromSharingLink = function(addedModels) {
