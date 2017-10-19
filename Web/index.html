@@ -112,18 +112,18 @@
                                                 <span data-bind="text: name"></span>
                                                 (<span data-bind="text: points"></span>)
                                             </td>
-                                            <td><a href="#" class="link-icon" data-bind="click: $parent.deleteOption"><span class="icon-bin"></span></a></a></td>
+                                            <td><a href="#" class="link-icon" data-bind="click: $parent.deleteOption" title="Delete option"><span class="icon-bin"></span></a></a></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </td>
-                            <td><a href="#" class="link-icon" data-bind="click: $parent.deleteModel"><span class="icon-bin"></span></a></td>
+                            <td><a href="#" class="link-icon" data-bind="click: $parent.deleteModel" title="Delete unit"><span class="icon-bin"></span></a></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="4">
-                                <select data-bind="options: models, optionsCaption: 'Add model...', value: selectedModel, optionsText: 'name'"></select>
+                                <select data-bind="options: models, optionsCaption: 'Add unit...', value: selectedModel, optionsText: 'name'"></select>
                             </td>
                         </tr>
                         <tr data-bind="visible: hasModels">
@@ -140,12 +140,12 @@
             <div class="col">
                 <h4>Share to...</h4>
                 <div class="sharing-panel">
-                    <a href="#" class="link-icon" data-bind="click: facebookShareList"><span class="icon-facebook2"></span></a>
-                    <a href="#" class="link-icon" data-bind="click: copyListToClipboard"><span class="icon-file-text2"></span></a>
-                    <a href="#" class="link-icon" data-bind="click: shortenUrl, visible: showLinkSharing"><span class="icon-link"></span></a>
+                    <a href="#" class="link-icon" data-bind="click: facebookShareList" title="Share to Facebook"><span class="icon-facebook2"></span></a>
+                    <a href="#" class="link-icon" data-bind="click: copyListToClipboard" title="Copy list to clipboard"><span class="icon-file-text2"></span></a>
+                    <a href="#" class="link-icon" data-bind="click: shortenUrl, visible: showLinkSharing" title="Get link to list"><span class="icon-link"></span></a>
                     <span data-bind="visible: hasShortenedUrl">
                         <textarea id="ShortenedUrlTextArea" data-bind="value: shortenedUrl" rows="1" ></textarea>
-                        <a href="#" class="link-icon" data-bind="click: copyUrlToClipboard"><span class="icon-copy"></span></a>
+                        <a href="#" class="link-icon" data-bind="click: copyUrlToClipboard" title="Copy link to clipboard"><span class="icon-copy"></span></a>
                     </span>
                 </div>
             </div>
