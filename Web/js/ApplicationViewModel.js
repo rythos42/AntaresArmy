@@ -15,7 +15,7 @@ var ApplicationViewModel = function(armyListXml) {
         if(!xml)
             return;
         
-        return $(xml).find('section').find('model').map(function(index, modelXml) {
+        var models = $(xml).find('section').find('model').map(function(index, modelXml) {
             var name = $(modelXml).children('name').html();
             var points = parseInt($(modelXml).children('points').html(), 10);
             var options = $(modelXml).find('option').map(function(index, optionXml) {
@@ -26,6 +26,18 @@ var ApplicationViewModel = function(armyListXml) {
             
             return new Model(name, points, options);
         });
+        
+        var availableArmyOptions = [];
+        availableArmyOptions.push(new Option('Block!', 5));
+        availableArmyOptions.push(new Option('Extra Shot', 10));
+        availableArmyOptions.push(new Option('Superior Shard', 15));
+        availableArmyOptions.push(new Option('Well Prepared', 5));
+        availableArmyOptions.push(new Option('Get Up!', 10));
+        availableArmyOptions.push(new Option('Pull Yourself Together!', 15));
+        availableArmyOptions.push(new Option('Marksman', 15));
+        models = $(new Model('Army Options', 0, availableArmyOptions)).add(models);
+        
+        return models;
     });
     
     self.totalPoints = ko.computed(function() {
