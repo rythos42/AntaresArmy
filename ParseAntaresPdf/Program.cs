@@ -19,6 +19,8 @@ namespace ParseAntaresPdf
         private static bool inSection;
         private static bool inModel;
         private static bool inOptions;
+        private static string currentModelName;
+        private static bool hadOptions;
         private static LineType nextLine;
         private static StringBuilder currentOptions = new StringBuilder();
 
@@ -203,12 +205,37 @@ namespace ParseAntaresPdf
             {
                 outFile.WriteLine("\t\t\t</options>");
                 inOptions = false;
+                hadOptions = true;
             }
 
             if (inModel && closeModel)
             {
+                // The Ghar Rebels PDF doesn't have any identifying marks for Flitters and Flitter Bombs ("Options") 
+                // like the rest of the PDFs, so resorting to this awful hackery for now.
+                // TODO: possibility to use my .json data files to do this better?
+                if (!hadOptions && currentModelName.Equals("FLITTERS"))
+                {
+                    outFile.WriteLine("\t\t\t<options>");
+                    outFile.WriteLine("\t\t\t\t<option>");
+                    outFile.WriteLine("\t\t\t\t\t<name>Flitters</name>");
+                    outFile.WriteLine("\t\t\t\t\t<points>5</points>");
+                    outFile.WriteLine("\t\t\t\t</option>");
+                    outFile.WriteLine("\t\t\t</options>");
+                }
+
+                if (!hadOptions && currentModelName.Equals("FLITTER BOMBS"))
+                {
+                    outFile.WriteLine("\t\t\t<options>");
+                    outFile.WriteLine("\t\t\t\t<option>");
+                    outFile.WriteLine("\t\t\t\t\t<name>Flitter Bombs</name>");
+                    outFile.WriteLine("\t\t\t\t\t<points>10</points>");
+                    outFile.WriteLine("\t\t\t\t</option>");
+                    outFile.WriteLine("\t\t\t</options>");
+                }
+
                 outFile.WriteLine("\t\t</model>");
                 inModel = false;
+                currentModelName = null;
             }
 
             if (inSection && closeSection)
@@ -246,6 +273,8 @@ namespace ParseAntaresPdf
                 nextLine = LineType.UnitTypePointsValueLimited;
                 outFile.WriteLine("\t\t<model>");
                 outFile.WriteLine("\t\t\t<name>" + adjustedModelName + "</name>");
+                currentModelName = adjustedModelName;
+                hadOptions = false;
                 return;
             }
 

@@ -1,37 +1,37 @@
-var ModelViewModel = function(model) {
+var ModelViewModel = function(model, addedOptions) {
     var self = this,
         internalAddedOptions = ko.observableArray();
     
-    self.name = ko.observable(model.name);
-    self.points = ko.observable(model.points);
-    self.options = model.options;
-    self.model = model;
+    self.name = ko.observable(model.name || model.n);
+    self.points = ko.observable(model.points || model.p);
+    self.options = model.options || $.map(model.o, function(option) { return new Option(option.n, option.p); });
+    self.addedOptions = ko.observableArray();
     
     self.currentOption = ko.observable();
     
-    self.addedOptions = ko.computed(function() {
-        return $.map(internalAddedOptions(), function(option) {
-            return new OptionViewModel(option);
-        });
-    });
+    if(addedOptions) {
+        self.addedOptions($.map(addedOptions, function(optionViewModelToAdd) {
+            return new OptionViewModel(optionViewModelToAdd);
+        }));
+    }
     
     self.currentOption.subscribe(function() {
         var option = self.currentOption();
         if(!option)
             return;
         
-        internalAddedOptions.push(self.currentOption());
+        self.addedOptions.push(new OptionViewModel(option));
         self.currentOption(null);
     });
     
     self.totalPoints = ko.computed(function() {
-        return internalAddedOptions().reduce(function(acc, option) {
-            return acc + option.points;
-        }, model.points);
+        return self.addedOptions().reduce(function(acc, option) {
+            return acc + option.points();
+        }, self.points());
     });
     
     self.deleteOption = function(viewModel) {
-        internalAddedOptions.remove(viewModel.option);
+        self.addedOptions.remove(viewModel);
     };
     
     self.hasOptions = ko.computed(function() {

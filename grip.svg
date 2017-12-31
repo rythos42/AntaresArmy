@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 32 32.000001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="grip.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="25.59375"
+     inkscape:cx="15.316239"
+     inkscape:cy="15.978142"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3348" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1020.3622)">
+    <circle
+       id="path3372-7-3"
+       cx="18.762516"
+       cy="1024.0955"
+       r="3.0506716" />
+    <circle
+       id="path3372-5-3"
+       cx="18.762516"
+       cy="1032.2472"
+       r="3.0506716" />
+    <circle
+       id="path3372-2-2"
+       cx="18.762516"
+       cy="1040.399"
+       r="3.0506716" />
+    <circle
+       id="path3372-2-2-3"
+       cx="18.762516"
+       cy="1048.5508"
+       r="3.0506716" />
+    <circle
+       id="path3372-7-3-1"
+       cx="11.252137"
+       cy="1024.0955"
+       r="3.0506716" />
+    <circle
+       id="path3372-5-3-1"
+       cx="11.252137"
+       cy="1032.2472"
+       r="3.0506716" />
+    <circle
+       id="path3372-2-2-38"
+       cx="11.252137"
+       cy="1040.399"
+       r="3.0506716" />
+    <circle
+       id="path3372-2-2-3-4"
+       cx="11.252137"
+       cy="1048.5508"
+       r="3.0506716" />
+  </g>
+</svg>

@@ -60,7 +60,7 @@
   { "name": "Overload Ammo" }, // must be above Micro-X Launcher
   { "name": "SlingNet Ammo" }, // must be above Micro-X Launcher
   { "name": "Micro-X Launcher" },
-  { "name": "Synchoniser Drone" },
+  { "name": "Synchoniser Drone", "replacement": "Synchroniser Drone" },
   { "name": "Synchroniser Drone" },
   { "name": "Shield Drone" },
   { "name": "Self-Repair" }, // must be above Weapon Drone

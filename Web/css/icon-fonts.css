@@ -1,9 +1,21 @@
-.icon-dots-three-vertical:before {
+.icon-grip:before {
   content: "\e900";
+}
+.icon-file-text2:before {
+  content: "\e926";
+}
+.icon-copy:before {
+  content: "\e92c";
 }
 .icon-bin:before {
   content: "\e9ac";
 }
+.icon-link:before {
+  content: "\e9cb";
+}
 .icon-question:before {
   content: "\ea09";
+}
+.icon-facebook2:before {
+  content: "\ea91";
 }
