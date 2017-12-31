@@ -3,7 +3,7 @@ var ModelViewModel = function(model, addedOptions) {
         internalAddedOptions = ko.observableArray();
     
     self.name = ko.observable(model.name || model.n);
-    self.points = ko.observable(model.points || model.p);
+    self.points = ko.observable(model.points || model.p || 0);
     self.options = model.options || $.map(model.o, function(option) { return new Option(option.n, option.p); });
     self.addedOptions = ko.observableArray();
     
