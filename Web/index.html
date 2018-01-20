@@ -139,6 +139,10 @@
         <div class="row">
             <div class="col">
                 <h4>Share to...</h4>
+                <div class="alert alert-warning" data-bind="visible: loadedFromOldSharingLink">
+                    <p>This list was loaded from an <em>old style shared link</em>. <strong>Set the faction and ensure you have no mercenaries</strong> before you share.</p>
+                    <p>If you don't, <strong>it won't load properly</strong> when you share it.</p>
+                </div>
                 <div class="sharing-panel">
                     <a href="#" class="link-icon" data-bind="click: facebookShareList" title="Share to Facebook"><span class="icon-facebook2"></span></a>
                     <a href="#" class="link-icon" data-bind="click: copyListToClipboard" title="Copy list to clipboard"><span class="icon-file-text2"></span></a>

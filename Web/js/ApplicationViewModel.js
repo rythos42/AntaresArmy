@@ -11,6 +11,7 @@ var ApplicationViewModel = function(gapiLoaded) {
     self.availableFactions = ko.observableArray(['Concord', 'Freeborn', 'Algoryn', 'Isorian', 'Boromite', 'Ghar Empire', 'Ghar Rebel']);
     self.shortenedUrl = ko.observable(null);
     self.showLinkSharing = ko.observable(false);
+    self.loadedFromOldSharingLink = ko.observable(false);
     
     self.models = ko.computed(function() {
         var models = armyList();
@@ -73,6 +74,13 @@ var ApplicationViewModel = function(gapiLoaded) {
             armyList(parsedArmyList);
             self.loaded(true);
         });
+        
+        if(self.loadedFromOldSharingLink()) {
+            // set origin on existing models
+            $.each(self.addedModels(), function(index, addedModel) {
+                addedModel.origin(selectedFaction);
+            });
+        }
     });
     
     gapiLoaded.subscribe(function(isLoaded) {
@@ -83,5 +91,5 @@ var ApplicationViewModel = function(gapiLoaded) {
     // start off loading the first item in the list    
     self.selectedFaction(self.availableFactions()[0]);
     
-    sharing.tryLoadFromSharingLink(self.addedModels);
+    sharing.tryLoadFromSharingLink(self.addedModels, self.loadedFromOldSharingLink);
 };

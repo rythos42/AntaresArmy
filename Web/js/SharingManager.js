@@ -90,7 +90,7 @@ var SharingManager = function() {
     
     
     // TODO: do the original loading too!!
-    self.tryLoadFromSharingLink = function(addedModels) {
+    self.tryLoadFromSharingLink = function(addedModels, loadedFromOldSharingLink) {
         var url = window.location.href;
             regex = new RegExp("[?&]l(=([^&#]*)|&|#|$)"),
             results = regex.exec(url);
@@ -106,6 +106,7 @@ var SharingManager = function() {
             addedModels($.map(shareableList, function(modelViewModel) {
                 return new ModelViewModel(modelViewModel, modelViewModel.ao);
             }));
+            loadedFromOldSharingLink(true);
             return;
         }       
         
@@ -113,7 +114,7 @@ var SharingManager = function() {
         var cachedModelsFromXml;
         var cachedFactionName;
         $.each(shareableList, function(index, shareableModel) {
-            // shareableModel is like -- {"or":"Concord", "n": "C3 STRIKE SQUAD", "ao":["Spotter Drone"]}
+            // shareableModel is like -- {"or":"Concord","n":"C3 STRIKE SQUAD","ao":["Spotter Drone"]}
             
             // load a new faction from server if not the one we have already
             var armyListLoadingDeferred = $.Deferred();
