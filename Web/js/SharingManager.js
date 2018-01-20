@@ -1,23 +1,15 @@
 var SharingManager = function() {
-    var self = this;
+    var self = this,
+        mapper = new ArmyListMapper();
     
     function createShareable(object) {
         var shareableClone = $.map(ko.toJS(object), function(model) {
+            var addedOptions = $.map(model.addedOptions, function(option) { return option.name; });
+            
             return {
+                or: model.origin,
                 n: model.name,
-                p: model.points,
-                o: $.map(model.options, function(option) {
-                    return {
-                        n: option.name,
-                        p: option.points
-                    };
-                }),
-                ao: $.map(model.addedOptions, function(option) {
-                    return {
-                        n: option.name,
-                        p: option.points
-                    };
-                })
+                ao: addedOptions.length ? addedOptions : undefined
             };
         });
         
@@ -96,6 +88,8 @@ var SharingManager = function() {
         toastr.success('Text list copied to clipboard.');
     };
     
+    
+    // TODO: do the original loading too!!
     self.tryLoadFromSharingLink = function(addedModels) {
         var url = window.location.href;
             regex = new RegExp("[?&]l(=([^&#]*)|&|#|$)"),
@@ -105,10 +99,60 @@ var SharingManager = function() {
             return;
       
         var compressedList = decodeURIComponent(results[2].replace(/\+/g, " "));
-        var list = JSON.parse(LZString.decompressFromEncodedURIComponent(compressedList));
+        var shareableList = JSON.parse(LZString.decompressFromEncodedURIComponent(compressedList));
         
-        addedModels($.map(list, function(modelViewModel) {
-            return new ModelViewModel(modelViewModel, modelViewModel.ao);
-        }));
+        // if there is no origin on the decompressed list, load it the old way.
+        if(shareableList.length && !shareableList[0].or) {
+            addedModels($.map(shareableList, function(modelViewModel) {
+                return new ModelViewModel(modelViewModel, modelViewModel.ao);
+            }));
+            return;
+        }       
+        
+        // if there is an origin, load it the new way -- new way saves a lot of space in the URL
+        var cachedModelsFromXml;
+        var cachedFactionName;
+        $.each(shareableList, function(index, shareableModel) {
+            // shareableModel is like -- {"or":"Concord", "n": "C3 STRIKE SQUAD", "ao":["Spotter Drone"]}
+            
+            // load a new faction from server if not the one we have already
+            var armyListLoadingDeferred = $.Deferred();
+            if(cachedFactionName !== shareableModel.or) {
+                mapper.load(shareableModel.or, function(models) {
+                    cachedModelsFromXml = models;
+                    armyListLoadingDeferred.resolve(cachedModelsFromXml);
+                    cachedFactionName = shareableModel.or;
+                });
+            } else {
+                armyListLoadingDeferred.resolve(cachedModelsFromXml);
+            }
+            
+            armyListLoadingDeferred.then(function(modelsFromXml) {
+                var addedViewModel;
+                $.each(modelsFromXml, function(index, modelFromXml) {
+                    if(modelFromXml.name === shareableModel.n) {
+                        // get added options, based on available options from XML
+                        var addedOptions = $.map(shareableModel.ao, function(shareableOptionName) {
+                            var option;
+                            $.each(modelFromXml.options, function(index, optionFromXml) {
+                                if(optionFromXml.name === shareableOptionName) {
+                                    option = optionFromXml;
+                                    return false;
+                                }
+                                return true;
+                            });
+                            return option;                        
+                        });
+                        
+                        addedViewModel = new ModelViewModel(modelFromXml, addedOptions);
+                        return false;
+                    }
+                    return true;
+                });
+                
+                // finally, add the created viewmodel to the list
+                addedModels.push(addedViewModel);
+            });
+        });
     };
 };

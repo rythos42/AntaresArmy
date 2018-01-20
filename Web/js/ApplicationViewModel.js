@@ -1,6 +1,6 @@
 var ApplicationViewModel = function(gapiLoaded) {
     var self = this,
-        armyListXml = ko.observable(),
+        armyList = ko.observable(),
         mapper = new ArmyListMapper(),
         sharing = new SharingManager();
     
@@ -13,33 +13,8 @@ var ApplicationViewModel = function(gapiLoaded) {
     self.showLinkSharing = ko.observable(false);
     
     self.models = ko.computed(function() {
-        var xml = armyListXml();
-        if(!xml)
-            return;
-        
-        var models = $(xml).find('section').find('model').map(function(index, modelXml) {
-            var name = $(modelXml).children('name').html();
-            var points = parseInt($(modelXml).children('points').html(), 10);
-            var options = $.map($(modelXml).find('option'), function(optionXml) {
-                var optionName = $(optionXml).children('name').html();
-                var optionPoints = parseInt($(optionXml).children('points').html(), 10);
-                return new Option(optionName, optionPoints);
-            }); 
-            
-            return new Model(name, points, options);
-        });
-        
-        var availableArmyOptions = [];
-        availableArmyOptions.push(new Option('Block!', 5));
-        availableArmyOptions.push(new Option('Extra Shot', 10));
-        availableArmyOptions.push(new Option('Superior Shard', 15));
-        availableArmyOptions.push(new Option('Well Prepared', 5));
-        availableArmyOptions.push(new Option('Get Up!', 10));
-        availableArmyOptions.push(new Option('Pull Yourself Together!', 15));
-        availableArmyOptions.push(new Option('Marksman', 15));
-        models = $(new Model('Army Options', 0, availableArmyOptions)).add(models);
-        
-        return models;
+        var models = armyList();
+        return models ? models : undefined;
     });
     
     self.totalPoints = ko.computed(function() {
@@ -94,8 +69,9 @@ var ApplicationViewModel = function(gapiLoaded) {
     });
     
     self.selectedFaction.subscribe(function(selectedFaction) {
-        mapper.load(selectedFaction, function(xml) {
-            armyListXml(xml);
+        mapper.load(selectedFaction, function(parsedArmyList) {
+            armyList(parsedArmyList);
+            self.loaded(true);
         });
     });
     
@@ -104,12 +80,8 @@ var ApplicationViewModel = function(gapiLoaded) {
             self.showLinkSharing(true);
     });
     
-    
     // start off loading the first item in the list    
-    mapper.load(self.availableFactions()[0], function(xml) {
-        armyListXml(xml);
-         self.loaded(true);
-    });
+    self.selectedFaction(self.availableFactions()[0]);
     
     sharing.tryLoadFromSharingLink(self.addedModels);
 };
