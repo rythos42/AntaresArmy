@@ -2,9 +2,12 @@ import React from 'react';
 import * as Redux from 'redux';
 import { connect } from 'react-redux';
 import { AnyAction } from "redux";
+import { shareToFacebook } from "./SharingPanelActions";
 
 interface SharingPanelProps {
     isLoadedFromOldStyleSharingLink: boolean;
+    
+    //shareArmyToFacebook: (a: string) => void;
 }
      
 class SharingPanelComponent extends React.Component<SharingPanelProps, {}> {
@@ -16,6 +19,10 @@ class SharingPanelComponent extends React.Component<SharingPanelProps, {}> {
     //show shortened URL when available: data-bind="visible: hasShortenedUrl"
     //show shortened URL value in text area data-bind="value: shortenedUrl" 
     // copy shortened URL to clipboard  data-bind="click: copyUrlToClipboard"
+    shareArmyToFacebook = () => {
+        //this.props.shareArmyToFacebook('a');
+    }
+    
     render() {
         return  <div>
                     <h4>Share to...</h4>
@@ -28,7 +35,7 @@ class SharingPanelComponent extends React.Component<SharingPanelProps, {}> {
                         : null
                     }
                     <div className="sharing-panel">
-                        <a href="#" className="link-icon" title="Share to Facebook"><span className="icon-facebook2"></span></a>
+                        <a href="#" className="link-icon" title="Share to Facebook" onClick={this.shareArmyToFacebook}><span className="icon-facebook2"></span></a>
                         <a href="#" className="link-icon" title="Copy list to clipboard"><span className="icon-file-text2"></span></a>
                         <a href="#" className="link-icon" title="Get link to list"><span className="icon-link"></span></a>
                         <span>
@@ -48,12 +55,8 @@ const mapStateToProps = (state: SharingPanelProps) => {
 
 const mapDispatchToProps = (dispatch: Redux.Dispatch<AnyAction>) => {
     return {
+        shareArmyToFacebook: dispatch(shareToFacebook())
     };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SharingPanelComponent);
-
-
-/*
-
-*/

@@ -1,10 +1,11 @@
 Next
-    style="display: none;" on container
-    reset select list after selection
-    fix ArmyListService url
-    remove 'Concord' from FactionSelectorSaga
+    Finish SharingPanel
+        -- I stopped working on it because this project isn't intended for release.
+
+    fix ArmyListService url -- it's hardcoded to localhost
+    remove 'Concord' from FactionSelectorSaga -- shouldn't be hardcoded
     update ArmyListService to use Ruby
-    question mark too close to faction selector
+    question mark too close to faction selector in UI
     able to drag and drop rows -- <tbody data-bind="sortable: { data: addedModels, options: { handle: '.sortableHandle', cursor: 'move' } }">
 
 
@@ -23,6 +24,7 @@ Future
     better error handling in FactionSelectorActions
     what does immutability in Redux gain you?
     understand mapStateToProps and mapDispatchToProps better
+    remove TypeScript and see what happens
     
     
     
