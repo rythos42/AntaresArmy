@@ -1,0 +1,99 @@
+Next
+    style="display: none;" on container
+    reset select list after selection
+    fix ArmyListService url
+    remove 'Concord' from FactionSelectorSaga
+    update ArmyListService to use Ruby
+    question mark too close to faction selector
+    able to drag and drop rows -- <tbody data-bind="sortable: { data: addedModels, options: { handle: '.sortableHandle', cursor: 'move' } }">
+
+
+
+Future
+    do I need a while(true){} loop in my FactionSelectorSaga?
+    why do I have to npm link typescript every time?
+    is my UnitList in the correct place in the data hierarchy?
+    what do the 3 yields in FactionSelectorSaga.fetchFactionUnitList actually do?
+    write tests for some of it, to make sure it's TDD...
+    translation support?
+    can I move the .babelrc to webpack.config.js?
+    is /src/components directory well formed?
+    fix header('Access-Control-Allow-Origin: http://mysite1.com', false); in ArmyListService
+    is AppSaga and AppReducer THE way to go?
+    better error handling in FactionSelectorActions
+    what does immutability in Redux gain you?
+    understand mapStateToProps and mapDispatchToProps better
+    
+    
+    
+Remaining ApplicationViewModel code:
+    var ApplicationViewModel = function(gapiLoaded) {
+        var self = this,
+            armyList = ko.observable(),
+            mapper = new ArmyListMapper(),
+            sharing = new SharingManager();
+        
+        self.loaded = ko.observable(false);
+        
+        self.shortenedUrl = ko.observable(null);
+        self.showLinkSharing = ko.observable(false);
+        self.loadedFromOldSharingLink = ko.observable(false);
+
+        self.hasShortenedUrl = ko.computed(function() {
+            return self.shortenedUrl() !== null;
+        });
+        
+        self.facebookShareList = function() {
+            sharing.shareToFacebook(self.addedModels);
+        };
+        
+        self.shortenUrl = function() {
+            sharing.shortenUrl(self.addedModels, function(shortenedUrl) {
+                self.shortenedUrl(shortenedUrl);
+            });
+        };
+        
+        self.copyUrlToClipboard = function() {
+            sharing.copyShortenedUrlToClipboard();
+        };
+        
+        self.copyListToClipboard = function() {
+            sharing.copyListToClipboard(self.addedModels);
+        };
+                
+        self.selectedModel.subscribe(function(selectedModel) {
+            if(!selectedModel)
+                return;
+
+            var modelViewModel = new ModelViewModel(selectedModel);
+            modelViewModel.currentOption.subscribe(function() {
+                self.shortenedUrl(null);
+            });
+            
+            self.addedModels.push(modelViewModel);
+            
+            self.selectedModel(null);
+            self.shortenedUrl(null);
+        });
+        
+        self.selectedFaction.subscribe(function(selectedFaction) {
+            mapper.load(selectedFaction, function(parsedArmyList) {
+                armyList(parsedArmyList);
+                self.loaded(true);
+            });
+            
+            if(self.loadedFromOldSharingLink()) {
+                // set origin on existing models
+                $.each(self.addedModels(), function(index, addedModel) {
+                    addedModel.origin(selectedFaction);
+                });
+            }
+        });
+        
+        gapiLoaded.subscribe(function(isLoaded) {
+            if(isLoaded)
+                self.showLinkSharing(true);
+        });
+        
+        sharing.tryLoadFromSharingLink(self.addedModels, self.loadedFromOldSharingLink);
+    };

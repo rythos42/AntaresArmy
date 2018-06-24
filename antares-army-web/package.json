@@ -1,0 +1,46 @@
+{
+  "name": "antares-army-web",
+  "version": "1.1.0",
+  "description": "Army list builder for the tabletop wargame Beyond the Gates of Antares",
+  "main": "index.js",
+  "repository": "https://github.com/rythos42/AntaresArmy",
+  "author": "Craig Fleming",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "jquery": "^3.3.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "ts-loader": "^4.4.1",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.2",
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-redux": "^6.0.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.6",
+    "webpack-notifier": "^1.6.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js --hot --inline"
+  }
+}

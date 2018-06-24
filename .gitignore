@@ -49,3 +49,4 @@ obj/
 packages/
 .suo
 .user
+dist 

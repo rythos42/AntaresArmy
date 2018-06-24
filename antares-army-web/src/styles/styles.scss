@@ -1,0 +1,57 @@
+@import "icon-fonts.css";
+
+#Models {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+
+    .name {
+        width: 300px;
+    }
+
+    .options {
+        width: 200px;
+        border-right: 1px dotted black;
+        
+        table {
+            border-collapse: separate;
+        }
+
+        table td {
+            padding: 0.2em;
+        }
+    }
+
+    > tbody > tr {
+        box-shadow: 3px 3px 3px 3px rgba(0,0,0, .5); 
+    }
+
+    td {
+        padding: 0.2em;
+    }
+    
+    select {
+        width: 100%;
+    }
+}
+
+.link-icon {
+    text-decoration: none !important;
+}
+
+.header .actions {
+    text-align: right;
+    padding-top: 3px;
+}
+
+.container {
+    margin-top: 1em;
+}
+
+#ShortenedUrlTextArea {
+    overflow: hidden;
+    width: 186px;    
+}
+
+.sharing-panel a {
+    font-size: 30px;
+}

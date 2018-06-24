@@ -1,4 +1,5 @@
 <?php 
+header('Access-Control-Allow-Origin: http://localhost:8080');
 
 $action = $_REQUEST['action'];
         
