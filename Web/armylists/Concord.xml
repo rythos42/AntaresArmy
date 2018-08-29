@@ -132,7 +132,7 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Self-Repair</name>
+					<name>Self Repair</name>
 					<points>10</points>
 				</option>
 			</options>
@@ -222,6 +222,42 @@
 				<option>
 					<name>Plasma Grenade</name>
 					<points>2</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>C3 KRASZ ASSAULT SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>110</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>25</points>
+				</option>
+				<option>
+					<name>Plasma Lance</name>
+					<points>1</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
 				</option>
 			</options>
 		</model>
@@ -410,6 +446,10 @@
 					<points>10</points>
 				</option>
 				<option>
+					<name>Fractal DBC</name>
+					<points>0</points>
+				</option>
+				<option>
 					<name>Spotter Drone</name>
 					<points>10</points>
 				</option>
@@ -510,34 +550,6 @@
 			</options>
 		</model>
 		<model>
-			<name>CONCORD C3M407 (CS) CLOSE SUPPORT DRONE</name>
-			<unit-type>Vehicle Unit</unit-type>
-			<points>240</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Plasma Light Support</name>
-					<points>22</points>
-				</option>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Shield Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Batter Drone</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Self Repair</name>
-					<points>10</points>
-				</option>
-			</options>
-		</model>
-		<model>
 			<name>CONCORD C3M25 HEAVY COMBAT DRONE</name>
 			<unit-type>Vehicle Unit</unit-type>
 			<points>418</points>
@@ -576,16 +588,44 @@
 					<points>25</points>
 				</option>
 				<option>
-					<name>Mag Mortar</name>
-					<points>0</points>
-				</option>
-				<option>
 					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
 					<points>5</points>
 				</option>
 				<option>
 					<name>Scrambler, Arc, Blur, Scoot, Net and Grip</name>
 					<points>15</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Self Repair</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>CONCORD C3M407 (CS) CLOSE SUPPORT DRONE</name>
+			<unit-type>Vehicle Unit</unit-type>
+			<points>240</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Plasma Light Support</name>
+					<points>22</points>
+				</option>
+				<option>
+					<name>Plasma Light Support</name>
+					<points>44</points>
 				</option>
 				<option>
 					<name>Spotter Drone</name>
@@ -660,8 +700,8 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
+					<name>Breaching Kit</name>
+					<points>10</points>
 				</option>
 				<option>
 					<name>Batter Drone</name>
@@ -678,6 +718,10 @@
 				<option>
 					<name>Self Repair</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
 				</option>
 			</options>
 		</model>
