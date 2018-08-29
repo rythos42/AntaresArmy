@@ -258,20 +258,16 @@
 			<is-limited>true</is-limited>
 			<options>
 				<option>
-					<name>Creepers</name>
-					<points>98</points>
-				</option>
-				<option>
-					<name>Plasma Dump</name>
-					<points>5</points>
-				</option>
-				<option>
 					<name>Mag Cannon</name>
 					<points>10</points>
 				</option>
 				<option>
 					<name>Plasma Amplifier</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Dump</name>
+					<points>5</points>
 				</option>
 			</options>
 		</model>

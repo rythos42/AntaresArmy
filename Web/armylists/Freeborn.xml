@@ -44,11 +44,11 @@
 					<points>1</points>
 				</option>
 				<option>
-					<name>Plasma Carbine</name>
+					<name>Captain Plasma Carbine</name>
 					<points>9</points>
 				</option>
 				<option>
-					<name>Captain a Compression Carbine</name>
+					<name>Captain Compression Carbine</name>
 					<points>9</points>
 				</option>
 				<option>
@@ -228,7 +228,7 @@
 	</section>
 	<section name="SUPPORT">
 		<model>
-			<name>SKYRAIDER COMMAND SQAUD</name>
+			<name>SKYRAIDER COMMAND SQUAD</name>
 			<unit-type>Mounted Command Unit</unit-type>
 			<points>152</points>
 			<is-limited>true</is-limited>
@@ -640,6 +640,10 @@
 					<points>22</points>
 				</option>
 				<option>
+					<name>Plasma Light Support</name>
+					<points>44</points>
+				</option>
+				<option>
 					<name>Spotter Drone</name>
 					<points>10</points>
 				</option>
@@ -736,10 +740,6 @@
 					<points>25</points>
 				</option>
 				<option>
-					<name>Mag Mortar</name>
-					<points>0</points>
-				</option>
-				<option>
 					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
 					<points>5</points>
 				</option>
@@ -808,8 +808,8 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Synchroniser Drone</name>
-					<points>20</points>
+					<name>Breaching Kit</name>
+					<points>10</points>
 				</option>
 				<option>
 					<name>Batter Drone</name>
@@ -826,6 +826,10 @@
 				<option>
 					<name>Self Repair</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
 				</option>
 			</options>
 		</model>

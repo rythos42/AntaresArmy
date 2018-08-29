@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="CommandLineArguments.cs" />
     <Compile Include="CompareIgnoreSpaces.cs" />
+    <Compile Include="Text\AmmoTypes.cs" />
     <Compile Include="Text\IgnoreLines.cs" />
     <Compile Include="Option.cs" />
     <Compile Include="Text\Options.cs" />
@@ -75,6 +76,7 @@
     <Content Include="Data\Sections.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Data\AmmoTypes.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

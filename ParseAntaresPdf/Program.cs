@@ -28,10 +28,8 @@ namespace ParseAntaresPdf
         private static Options options;
         private static IgnoreLines ignoreLines;
         private static Sections sections;
-
-        private const string AmmoTypes = "Scrambler, Arc, Blur, Scoot, Net and Grip";
-
-
+        private static AmmoTypes ammoTypes;
+        
         private static void Main(string[] args)
         {
             var commandLineArgs = new CommandLineArguments(args);
@@ -64,6 +62,7 @@ namespace ParseAntaresPdf
                 options = new Options();
                 ignoreLines = new IgnoreLines();
                 sections = new Sections();
+                ammoTypes = new AmmoTypes();
 
                 var lines = output.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var line in lines)
@@ -151,7 +150,7 @@ namespace ParseAntaresPdf
                 outFile.WriteLine("\t\t\t\t<option>");
 
                 // Have to handle ammo types specially
-                if (name.IndexOf(AmmoTypes) != -1)
+                if (ammoTypes.Contains(name))
                     points = WriteAmmoTypes(outFile, points, options[i], options[i + 1]);
                 else
                     WriteOptionName(outFile, name);

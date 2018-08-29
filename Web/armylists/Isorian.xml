@@ -62,38 +62,58 @@
 			</options>
 		</model>
 		<model>
-			<name>SENATEX PHASE SQUAD</name>
-			<unit-type>Infantry Unit</unit-type>
-			<points>112</points>
-			<is-limited>false</is-limited>
+			<name>ISORIAN DRONE COMMANDER</name>
+			<unit-type>Weapon Drone Command Unit</unit-type>
+			<points>51</points>
+			<is-limited>true</is-limited>
 			<options>
 				<option>
 					<name>Spotter Drone</name>
 					<points>10</points>
 				</option>
 				<option>
-					<name>Plasma Grenade</name>
-					<points>2</points>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Nano-probe Net</name>
+					<points>30</points>
 				</option>
 				<option>
 					<name>Synchroniser Drone</name>
 					<points>20</points>
 				</option>
 				<option>
-					<name>Plasma Lance</name>
-					<points>3</points>
-				</option>
-				<option>
-					<name>Trooper</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>SlingNet Ammo</name>
-					<points>5</points>
-				</option>
-				<option>
-					<name>Leader 2</name>
+					<name>Self Repair</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Nhamak Light Support Drones</name>
+					<points>59</points>
+				</option>
+				<option>
+					<name>Phaseshift Shield</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>NANO-PROBE NET</name>
+			<unit-type>Probe Unit</unit-type>
+			<points>30</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Nano-probes</name>
+					<points>5</points>
 				</option>
 			</options>
 		</model>
@@ -214,6 +234,42 @@
 			</options>
 		</model>
 		<model>
+			<name>SENATEX PHASE SQUAD</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>112</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Plasma Grenade</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Synchroniser Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Plasma Lance</name>
+					<points>3</points>
+				</option>
+				<option>
+					<name>Trooper</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>SlingNet Ammo</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
+				</option>
+			</options>
+		</model>
+		<model>
 			<name>TSAN RA COMMAND SQUAD</name>
 			<unit-type>Infantry Command Unit</unit-type>
 			<points>131</points>
@@ -252,34 +308,6 @@
 	</section>
 	<section name="SUPPORT">
 		<model>
-			<name>SENATEX PHASE SNIPER</name>
-			<unit-type>Weapon Team Unit</unit-type>
-			<points>56</points>
-			<is-limited>false</is-limited>
-			<options>
-				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Leader</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Camo Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Leader 2</name>
-					<points>20</points>
-				</option>
-				<option>
-					<name>Shield Drone</name>
-					<points>10</points>
-				</option>
-			</options>
-		</model>
-		<model>
 			<name>SENATEX SUPPORT TEAM</name>
 			<unit-type>Weapon Team Unit</unit-type>
 			<points>40</points>
@@ -292,6 +320,10 @@
 				<option>
 					<name>Plasma Cannon</name>
 					<points>35</points>
+				</option>
+				<option>
+					<name>Phase-shift Projector</name>
+					<points>10</points>
 				</option>
 				<option>
 					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>
@@ -320,6 +352,34 @@
 				<option>
 					<name>Trooper</name>
 					<points>15</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>SENATEX PHASE SNIPER</name>
+			<unit-type>Weapon Team Unit</unit-type>
+			<points>56</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Camo Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Shield Drone</name>
+					<points>10</points>
 				</option>
 			</options>
 		</model>
@@ -420,6 +480,10 @@
 				<option>
 					<name>Fractal Cannon</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Phase-shift Projector</name>
+					<points>0</points>
 				</option>
 				<option>
 					<name>Spotter Drone</name>
@@ -542,10 +606,6 @@
 				<option>
 					<name>Fractal Bombard</name>
 					<points>25</points>
-				</option>
-				<option>
-					<name>Mag Mortar</name>
-					<points>0</points>
 				</option>
 				<option>
 					<name>Scrambler, Arc, Blur, Scoot, Net or Grip</name>

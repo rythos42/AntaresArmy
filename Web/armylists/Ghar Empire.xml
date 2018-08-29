@@ -116,16 +116,20 @@
 					<points>6</points>
 				</option>
 				<option>
-					<name>Leader 2</name>
-					<points>10</points>
+					<name>Plasma Grenade</name>
+					<points>2</points>
 				</option>
 				<option>
 					<name>Weapon Team with Disruptor Cannon</name>
 					<points>23</points>
 				</option>
 				<option>
-					<name>Plasma Grenade</name>
+					<name>Vac Armour</name>
 					<points>2</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
 				</option>
 			</options>
 		</model>

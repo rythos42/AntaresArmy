@@ -136,20 +136,20 @@
 					<points>10</points>
 				</option>
 				<option>
-					<name>Leader 2</name>
-					<points>10</points>
+					<name>Trooper</name>
+					<points>22</points>
 				</option>
 				<option>
 					<name>Synchroniser Drone</name>
 					<points>20</points>
 				</option>
 				<option>
-					<name>Homer Drone</name>
-					<points>15</points>
+					<name>Leader 2</name>
+					<points>10</points>
 				</option>
 				<option>
-					<name>Trooper</name>
-					<points>22</points>
+					<name>Homer Drone</name>
+					<points>15</points>
 				</option>
 			</options>
 		</model>
@@ -238,20 +238,20 @@
 			<is-limited>false</is-limited>
 			<options>
 				<option>
-					<name>Spotter Drone</name>
-					<points>10</points>
-				</option>
-				<option>
-					<name>Compactor Drone with compacted Mag Light Support</name>
-					<points>15</points>
-				</option>
-				<option>
 					<name>Compactor Drone</name>
 					<points>5</points>
 				</option>
 				<option>
 					<name>Mag Cannon</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Spotter Drone</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Compactor Drone with compacted Mag Light Support</name>
+					<points>15</points>
 				</option>
 			</options>
 		</model>
@@ -310,6 +310,10 @@
 					<points>0</points>
 				</option>
 				<option>
+					<name>Fractal DBC</name>
+					<points>0</points>
+				</option>
+				<option>
 					<name>Plasma Cannon</name>
 					<points>5</points>
 				</option>
@@ -335,6 +339,30 @@
 				</option>
 				<option>
 					<name>Mag Guns or Mag Repeaters</name>
+					<points>3</points>
+				</option>
+			</options>
+		</model>
+		<model>
+			<name>AI FIELD ENGINEER TEAM</name>
+			<unit-type>Infantry Unit</unit-type>
+			<points>30</points>
+			<is-limited>false</is-limited>
+			<options>
+				<option>
+					<name>Batter Drone</name>
+					<points>20</points>
+				</option>
+				<option>
+					<name>Engineer</name>
+					<points>18</points>
+				</option>
+				<option>
+					<name>Leader</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Mag Gun or Mag Repeater</name>
 					<points>3</points>
 				</option>
 			</options>

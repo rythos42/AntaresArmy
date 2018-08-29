@@ -35,14 +35,21 @@
   { "name": "MOD 2" },
   { "name": "Spotter Drone" },
   { "name": "Leader Plasma Pistol" }, // must be above Plasma Pistol
-  { "name": "Plasma Pistol" },
+  { "name": "Plasma Pistol" },  
+  {
+    "name": "Engineer to Leader",
+    "replacement": "Leader"
+  }, // must be above Mag Guns or Mag Repeaters for AI Field Engineering Team
   { "name": "Mag Guns or Mag Repeaters" }, // must be above Mag Guns and Mag Gun
   { "name": "Mag Guns" }, // must be above Mag Gun
   { "name": "Leader Mag Gun or Mag Repeater" }, // must be above Leader Mag Gun and Mag Gun
   { "name": "Leader Mag Gun" }, // must be above Mag Gun
   { "name": "Medi-Drone" },
   { "name": "HL Booster" },
-  { "name": "Captain a Compression Carbine" },
+  { 
+    "name": "Captain a Compression Carbine", 
+    "replacement": "Captain Compression Carbine" 
+  },
   { "name": "Bodyguard Compression Carbine" }, // must be above Bodyguard
   { "name": "Bodyguard" },
   { "name": "Phase Armour" }, // must be above Reflex Armour
@@ -60,7 +67,7 @@
   { "name": "Overload Ammo" }, // must be above Micro-X Launcher
   { "name": "SlingNet Ammo" }, // must be above Micro-X Launcher
   { "name": "Micro-X Launcher" },
-  { "name": "Synchoniser Drone", "replacement": "Synchroniser Drone" },
+  { "name": "Synchoniser Drone" },
   { "name": "Synchroniser Drone" },
   { "name": "Shield Drone" },
   { "name": "Self-Repair" }, // must be above Weapon Drone
@@ -72,7 +79,15 @@
   { "name": "Weapon Drone" },
   { "name": "Batter Drone" },
   { "name": "Scrambler, Arc, Blur, Scoot, Net and Grip" },
+  { 
+    "name": "Scram- bler, Arc, Blur, Scoot, Net and Grip",
+    "replacement": "Scrambler, Arc, Blur, Scoot, Net and Grip"
+  },
   { "name": "Scrambler, Arc, Blur, Scoot, Net or Grip" },
+  { 
+    "name": "Scram- bler, Arc, Blur, Scoot, Net or Grip",
+    "replacement": "Scrambler, Arc, Blur, Scoot, Net or Grip"
+  },
   { "name": "X-Launcher" },
   { "name": "Fractal Bombard" }, // must be above X-Howitzer
   { "name": "Plasma Bombard" }, // must be above X-Howitzer
@@ -102,6 +117,10 @@
   { "name": "Compactor Drone" },
   { "name": "Lectro Lash or Tractor Maul" }, // must be above Leader
   { "name": "Leader Plasma Carbine" }, // must be above Plasma Carbine and Leader
+  { 
+    "name": "Captain a Plasma Carbine", 
+    "replacement": "Captain Plasma Carbine" 
+  },  // must be above Plasma Carbine
   { "name": "Leader Mag Repeater" }, // must be above Leader
   { "name": "Leader 3" }, // must be above Leader
   { "name": "Leader 2" }, // must be above Leader
@@ -115,8 +134,13 @@
   { "name": "Homer Drone" },
   { "name": "Camo Drone" },
   { "name": "Solar Charges" },
+  { "name": "Fractal DBC" }, // must be above "10pts " below, for C3D2 Medium Support Drone
   {
-    "name": "Pistol",
+    "name": "10pts  Pistols ",
+    "replacement": "Mag Gun or Mag Repeater"
+  }, // must be below anything with Pistol in it. This one is really unfortunate - AI Field Engineering Team parsing leaves "Pistol" on it's own line, when it should be matched with Mag Gun or Mag Repeater
+  {
+    "name": "10pts Pistol ",
     "replacement": "Mag Gun or Mag Repeater"
   }, // must be below anything with Pistol in it. This one is really unfortunate - AI Medic Team parsing leaves "Pistol" on it's own line, when it should be matched with Mag Gun or Mag Repeater
   { "name": "Ganger" },
@@ -144,6 +168,7 @@
   { "name": "Outcasts with Maglash" }, // must be above Outcast
   { "name": "Outcasts with Lugger guns" }, // must be above Outcast
   { "name": "Weapon Team with Disruptor Cannon" }, // must be above Disruptor Cannon
+  { "name": "Vac Armour" }, // must be above Outcast
   { "name": "Outcast" },
   { "name": "Attack Scutters" }, // must be above Scutter
   { "name": "Scutter" },
@@ -154,6 +179,7 @@
   { "name": "Tectorist Scouts" },
   { "name": "Disruptor Bomber" },
   { "name": "Flitters" },
+  { "name": "Flitter Bombs" },
   { "name": "Lugger Ammo" },
 
   { "name": "Rebels" },
@@ -169,5 +195,17 @@
   {
     "name": "Free of Mag Gun",
     "replacement": "Plasma Lance"
-  } // Rebel Black Guard Leader Plasma Lance
+  }, // Rebel Black Guard Leader Plasma Lance
+  {
+    "name": "GP Drone breaching kit",
+    "replacement": "Breaching Kit"
+  },
+  { "name": "Engineer" },
+  { "name": "Nhamak Light Support Drones" },
+  { "name": "Phase-shift Projector" },
+  {
+    "name": "10pts ",
+    "replacement": "Compactor Drone with compacted Mag Light Support"
+  }, // this one sucks more than the above two. AI Intruder Skimmer Squad literally has a line with just "10pts " that should be a Compactor Drone etc.
+  // keep this one at the very bottom, it'll mess up a lot of stuff I'm sure.
 ]

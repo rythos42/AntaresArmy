@@ -4,6 +4,6 @@
     <StartArguments>-pdf "C:\work\Local\AntaresArmy\ParseAntaresPdf\bin\Debug\Ghar Rebel Army List Antares V2.0 pdf.pdf"</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
