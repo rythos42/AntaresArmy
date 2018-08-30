@@ -104,20 +104,24 @@
 					<points>18</points>
 				</option>
 				<option>
-					<name>Lectro Lash or Tractor Maul</name>
-					<points>5</points>
+					<name>Leader Mag Gun</name>
+					<points>3</points>
 				</option>
 				<option>
 					<name>Plasma Grenade</name>
 					<points>2</points>
 				</option>
 				<option>
-					<name>Leader 2</name>
-					<points>10</points>
+					<name>Lectro Lash or Tractor Maul</name>
+					<points>5</points>
 				</option>
 				<option>
-					<name>Leader Mag Gun</name>
+					<name>Fractal Charges</name>
 					<points>3</points>
+				</option>
+				<option>
+					<name>Leader 2</name>
+					<points>10</points>
 				</option>
 			</options>
 		</model>
@@ -140,12 +144,20 @@
 					<points>15</points>
 				</option>
 				<option>
-					<name>Reflex Armour</name>
-					<points>2</points>
+					<name>Breaching Kit</name>
+					<points>10</points>
 				</option>
 				<option>
 					<name>Vorpal Charges</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Fractal Charges</name>
+					<points>3</points>
 				</option>
 			</options>
 		</model>
@@ -168,12 +180,20 @@
 					<points>15</points>
 				</option>
 				<option>
-					<name>Reflex Armour</name>
-					<points>2</points>
+					<name>Breaching Kit</name>
+					<points>10</points>
 				</option>
 				<option>
 					<name>Vorpal Charges</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Reflex Armour</name>
+					<points>2</points>
+				</option>
+				<option>
+					<name>Fractal Charges</name>
+					<points>3</points>
 				</option>
 			</options>
 		</model>
@@ -280,6 +300,10 @@
 				<option>
 					<name>Mag Cannon</name>
 					<points>10</points>
+				</option>
+				<option>
+					<name>Fractal DBC</name>
+					<points>30</points>
 				</option>
 				<option>
 					<name>Frag Borer</name>
@@ -562,23 +586,23 @@
 					<points>12</points>
 				</option>
 				<option>
-					<name>Lectro Lashes or Tractor Mauls</name>
-					<points>5</points>
+					<name>Plasma Pistol</name>
+					<points>4</points>
 				</option>
 				<option>
 					<name>Spotter Drone</name>
 					<points>10</points>
 				</option>
 				<option>
-					<name>Plasma Pistol</name>
-					<points>4</points>
+					<name>Implosion Grenades</name>
+					<points>3</points>
 				</option>
 				<option>
 					<name>Borer Drone</name>
 					<points>15</points>
 				</option>
 				<option>
-					<name>Implosion Grenades</name>
+					<name>Fractal Charges</name>
 					<points>3</points>
 				</option>
 				<option>
@@ -587,6 +611,14 @@
 				</option>
 				<option>
 					<name>Vorpal Charges</name>
+					<points>10</points>
+				</option>
+				<option>
+					<name>Lectro Lashes or Tractor Mauls</name>
+					<points>5</points>
+				</option>
+				<option>
+					<name>Breaching Kit</name>
 					<points>10</points>
 				</option>
 			</options>

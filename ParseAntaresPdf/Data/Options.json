@@ -196,13 +196,11 @@
     "name": "Free of Mag Gun",
     "replacement": "Plasma Lance"
   }, // Rebel Black Guard Leader Plasma Lance
-  {
-    "name": "GP Drone breaching kit",
-    "replacement": "Breaching Kit"
-  },
+  { "name": "Breaching Kit" },
   { "name": "Engineer" },
   { "name": "Nhamak Light Support Drones" },
   { "name": "Phase-shift Projector" },
+  { "name": "Fractal Charges" },
   {
     "name": "10pts ",
     "replacement": "Compactor Drone with compacted Mag Light Support"
